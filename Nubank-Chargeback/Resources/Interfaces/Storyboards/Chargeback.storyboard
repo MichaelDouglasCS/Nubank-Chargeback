@@ -30,10 +30,9 @@
                                         <color key="textColor" red="0.43137254901960786" green="0.16862745098039217" blue="0.46666666666666667" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="mlw-6d-y5f">
-                                        <rect key="frame" x="15" y="81" width="315" height="306"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Content" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mlw-6d-y5f">
+                                        <rect key="frame" x="14" y="81" width="317" height="306"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <mutableString key="text">Estamos com você nesta! Certifique-se dos pontos abaixo, são muito importantes: • Você pode procurar o nome do estabelecimento no Google. Diversas vezes encontramos informações valiosas por lá e elas podem te ajudar neste processo. • Caso você reconheça a compra, é muito importante pra nós que entre em contato com o estabelecimento e certifique-se que a situação já não foi resolvida.</mutableString>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
@@ -76,14 +75,14 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="tgj-1v-HmH" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="PAw-Av-Day" secondAttribute="leading" constant="15" id="KPu-94-0ir"/>
-                                    <constraint firstAttribute="trailing" secondItem="mlw-6d-y5f" secondAttribute="trailing" constant="15" id="Qes-ZT-lg8"/>
+                                    <constraint firstItem="tgj-1v-HmH" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="PAw-Av-Day" secondAttribute="leading" constant="14" id="KPu-94-0ir"/>
+                                    <constraint firstAttribute="trailing" secondItem="mlw-6d-y5f" secondAttribute="trailing" constant="14" id="Qes-ZT-lg8"/>
                                     <constraint firstAttribute="bottom" secondItem="Mbl-YS-zCJ" secondAttribute="bottom" id="Wc8-da-nPR"/>
-                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="tgj-1v-HmH" secondAttribute="trailing" constant="15" id="Xqy-4D-cWC"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="tgj-1v-HmH" secondAttribute="trailing" constant="14" id="Xqy-4D-cWC"/>
                                     <constraint firstItem="tgj-1v-HmH" firstAttribute="top" secondItem="PAw-Av-Day" secondAttribute="top" constant="35" id="dH4-0S-ioP"/>
                                     <constraint firstAttribute="trailing" secondItem="Mbl-YS-zCJ" secondAttribute="trailing" id="eqt-Ca-PAm"/>
                                     <constraint firstItem="mlw-6d-y5f" firstAttribute="top" secondItem="tgj-1v-HmH" secondAttribute="bottom" constant="10" id="gJo-ds-gdm"/>
-                                    <constraint firstItem="mlw-6d-y5f" firstAttribute="leading" secondItem="PAw-Av-Day" secondAttribute="leading" constant="15" id="ioX-SU-DnQ"/>
+                                    <constraint firstItem="mlw-6d-y5f" firstAttribute="leading" secondItem="PAw-Av-Day" secondAttribute="leading" constant="14" id="ioX-SU-DnQ"/>
                                     <constraint firstItem="Mbl-YS-zCJ" firstAttribute="leading" secondItem="PAw-Av-Day" secondAttribute="leading" id="kjn-97-Mkk"/>
                                     <constraint firstItem="Mbl-YS-zCJ" firstAttribute="top" secondItem="mlw-6d-y5f" secondAttribute="bottom" constant="30" id="mFx-oY-TL4"/>
                                     <constraint firstItem="tgj-1v-HmH" firstAttribute="centerX" secondItem="PAw-Av-Day" secondAttribute="centerX" id="vX4-Rk-JFO"/>
@@ -106,6 +105,7 @@
                     <navigationItem key="navigationItem" id="RHh-bt-Xs4"/>
                     <connections>
                         <outlet property="closeButton" destination="4Ub-o2-YIS" id="xgA-2C-dL5"/>
+                        <outlet property="containerView" destination="PAw-Av-Day" id="KCC-uW-ZmM"/>
                         <outlet property="contentTextView" destination="mlw-6d-y5f" id="Afa-m8-E1T"/>
                         <outlet property="continueButton" destination="6xw-Gj-BQ2" id="ofa-4H-GRA"/>
                         <outlet property="titleLabel" destination="tgj-1v-HmH" id="sM3-hl-cDS"/>

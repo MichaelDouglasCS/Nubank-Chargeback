@@ -25,6 +25,7 @@
 		61F8F8C51F6CEBE800B6E1F4 /* ReasonDetailBO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F8F8C41F6CEBE800B6E1F4 /* ReasonDetailBO.swift */; };
 		61F8F8C71F6CF21200B6E1F4 /* StyleKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F8F8C61F6CF21200B6E1F4 /* StyleKit.swift */; };
 		61F8F8C91F6CF54B00B6E1F4 /* StringKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F8F8C81F6CF54B00B6E1F4 /* StringKit.swift */; };
+		61F8F8CB1F6EFDEF00B6E1F4 /* AlertKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F8F8CA1F6EFDEF00B6E1F4 /* AlertKit.swift */; };
 		96DF2E3ECFFFF3505A4E251C /* Pods_Nubank_ChargebackUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8E86B0E03489502D67EE31B /* Pods_Nubank_ChargebackUITests.framework */; };
 		9BE99412FF937CE5BF6BEFB8 /* Pods_Nubank_ChargebackTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 716BA32E9E5482F5B4908837 /* Pods_Nubank_ChargebackTests.framework */; };
 		B52AAA2416800059D0D1DFCE /* Pods_Nubank_Chargeback.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 184C1E4CE4E11AC274B0099D /* Pods_Nubank_Chargeback.framework */; };
@@ -74,6 +75,7 @@
 		61F8F8C41F6CEBE800B6E1F4 /* ReasonDetailBO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReasonDetailBO.swift; sourceTree = "<group>"; };
 		61F8F8C61F6CF21200B6E1F4 /* StyleKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StyleKit.swift; sourceTree = "<group>"; };
 		61F8F8C81F6CF54B00B6E1F4 /* StringKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringKit.swift; sourceTree = "<group>"; };
+		61F8F8CA1F6EFDEF00B6E1F4 /* AlertKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertKit.swift; sourceTree = "<group>"; };
 		6B6FD4CFA39995E81088C126 /* Pods-Nubank-Chargeback.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nubank-Chargeback.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Nubank-Chargeback/Pods-Nubank-Chargeback.debug.xcconfig"; sourceTree = "<group>"; };
 		716BA32E9E5482F5B4908837 /* Pods_Nubank_ChargebackTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nubank_ChargebackTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D9B93691515BA214445C606 /* Pods-Nubank-ChargebackUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nubank-ChargebackUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Nubank-ChargebackUITests/Pods-Nubank-ChargebackUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -265,6 +267,7 @@
 		61F78A6F1F6B7D4100F94CB0 /* UI Common */ = {
 			isa = PBXGroup;
 			children = (
+				61F8F8CA1F6EFDEF00B6E1F4 /* AlertKit.swift */,
 				61F8F8C81F6CF54B00B6E1F4 /* StringKit.swift */,
 				61F8F8C61F6CF21200B6E1F4 /* StyleKit.swift */,
 			);
@@ -667,6 +670,7 @@
 				61F5EB9F1F6C61FE000F1CE1 /* NoticeViewController.swift in Sources */,
 				61F8F8B91F6CB8A200B6E1F4 /* NoticeLO.swift in Sources */,
 				61F8F8C91F6CF54B00B6E1F4 /* StringKit.swift in Sources */,
+				61F8F8CB1F6EFDEF00B6E1F4 /* AlertKit.swift in Sources */,
 				61F8F8C31F6CE1D800B6E1F4 /* ActionBO.swift in Sources */,
 				61F5EB9B1F6C57E3000F1CE1 /* IBDesignableClass.swift in Sources */,
 			);
