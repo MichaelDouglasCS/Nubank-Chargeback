@@ -34,6 +34,9 @@ public final class ChargebackLO {
 
 	static public let sharedInstance: ChargebackLO = ChargebackLO()
 	
+	public var current: ChargebackBO?
+	public var cardIsBlocked: Bool?
+	
 //*************************************************
 // MARK: - Constructors
 //*************************************************
@@ -47,6 +50,16 @@ public final class ChargebackLO {
 //*************************************************
 // MARK: - Exposed Methods
 //*************************************************
+	
+	public func load(completionHandler: @escaping LogicResult) {
+		ServerRequest.API.chargeback.execute() { (json, result) in
+			
+			if let json = json.dictionaryObject {
+				self.current = ChargebackBO(JSON: json)
+			}
+			completionHandler(result)
+		}
+	}
 
 //*************************************************
 // MARK: - Overridden Public Methods

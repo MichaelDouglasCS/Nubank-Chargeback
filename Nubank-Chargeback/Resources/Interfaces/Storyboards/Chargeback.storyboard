@@ -55,6 +55,7 @@
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="continueAction:" destination="w2H-ff-w73" eventType="touchUpInside" id="NR4-2l-0gk"/>
+                                                    <segue destination="I7A-QR-6k8" kind="show" id="lMf-b1-v9p"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Ub-o2-YIS">
@@ -133,5 +134,217 @@
             </objects>
             <point key="canvasLocation" x="39.200000000000003" y="56.221889055472268"/>
         </scene>
+        <!--Chargeback View Controller-->
+        <scene sceneID="n8Q-aN-wY5">
+            <objects>
+                <viewController id="I7A-QR-6k8" customClass="ChargebackViewController" customModule="Nubank_Chargeback" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="OUm-EF-nKy"/>
+                        <viewControllerLayoutGuide type="bottom" id="2nP-7D-FcG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ZdE-ax-P0N">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iVo-iS-WRo" userLabel="Container" customClass="UIBox" customModule="Nubank_Chargeback" customModuleProvider="target">
+                                <rect key="frame" x="15" y="35" width="345" height="617"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QmP-XP-HZI">
+                                        <rect key="frame" x="157.5" y="30" width="31.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="15"/>
+                                        <color key="textColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ODY-lg-zhQ">
+                                        <rect key="frame" x="0.0" y="79.5" width="345" height="1"/>
+                                        <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="hed-J8-IsO"/>
+                                        </constraints>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="Ab7-Sh-3qe">
+                                        <rect key="frame" x="14" y="80.5" width="317" height="150"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="TZi-ab-Urz">
+                                                <rect key="frame" x="0.0" y="0.0" width="317" height="52"/>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_chargeback_lock" translatesAutoresizingMaskIntoConstraints="NO" id="KZI-OY-VsG">
+                                                        <rect key="frame" x="0.0" y="13.5" width="19" height="25"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="25" id="4HI-5h-zxf"/>
+                                                            <constraint firstAttribute="width" constant="19" id="rlz-wZ-U8M"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Card Status Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4cr-u2-WxS">
+                                                        <rect key="frame" x="31" y="16.5" width="286" height="19.5"/>
+                                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="14"/>
+                                                        <color key="textColor" red="0.83529411764705885" green="0.090196078431372548" blue="0.10588235294117647" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="e2m-lq-5ee">
+                                                <rect key="frame" x="0.0" y="52" width="317" height="49"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Card Merchant Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sml-t2-UIc">
+                                                        <rect key="frame" x="0.0" y="15" width="266" height="19.5"/>
+                                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="14"/>
+                                                        <color key="textColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SAI-Uz-8TK" customClass="UISwitchButton" customModule="Nubank_Chargeback" customModuleProvider="target">
+                                                        <rect key="frame" x="266" y="13" width="51" height="23"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="23" id="St6-44-PRT"/>
+                                                            <constraint firstAttribute="width" constant="51" id="Xec-Iu-aG0"/>
+                                                        </constraints>
+                                                        <state key="normal" image="icon_switch_off"/>
+                                                        <state key="selected" image="icon_switch_on"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isOn" value="NO"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="switchAction:" destination="I7A-QR-6k8" eventType="touchUpInside" id="WgK-AH-uWv"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="5bg-KF-awI">
+                                                <rect key="frame" x="0.0" y="101" width="317" height="49"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Card Possession Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uiX-Dx-gca">
+                                                        <rect key="frame" x="0.0" y="15" width="266" height="19.5"/>
+                                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="14"/>
+                                                        <color key="textColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aQS-0Q-AOg" customClass="UISwitchButton" customModule="Nubank_Chargeback" customModuleProvider="target">
+                                                        <rect key="frame" x="266" y="13" width="51" height="23"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="23" id="uGy-mh-6EQ"/>
+                                                            <constraint firstAttribute="width" constant="51" id="ydG-vs-Mqq"/>
+                                                        </constraints>
+                                                        <state key="normal" image="icon_switch_off"/>
+                                                        <state key="selected" image="icon_switch_on"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isOn" value="NO"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="switchAction:" destination="I7A-QR-6k8" eventType="touchUpInside" id="hK5-oH-qEw"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="150" id="pHh-A9-pX4"/>
+                                        </constraints>
+                                    </stackView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9B7-MN-2c6">
+                                        <rect key="frame" x="0.0" y="230.5" width="345" height="1"/>
+                                        <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="m1y-WW-di8"/>
+                                        </constraints>
+                                    </view>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Comment" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="xcC-0D-dTr">
+                                        <rect key="frame" x="14" y="245.5" width="317" height="301.5"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="Y8u-gG-8jz">
+                                        <rect key="frame" x="0.0" y="547" width="345" height="70"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ABV-2A-f2I">
+                                                <rect key="frame" x="0.0" y="0.0" width="164.5" height="70"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
+                                                <state key="normal" title="CANCELAR">
+                                                    <color key="titleColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="cancelAction:" destination="I7A-QR-6k8" eventType="touchUpInside" id="EyC-mp-nPp"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bMD-zD-XE8">
+                                                <rect key="frame" x="164.5" y="0.0" width="180.5" height="70"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
+                                                <state key="normal" title="CONTESTAR">
+                                                    <color key="titleColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="contestAction:" destination="I7A-QR-6k8" eventType="touchUpInside" id="OLx-Az-JU6"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="70" id="krL-4c-QfM"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="Y8u-gG-8jz" firstAttribute="leading" secondItem="iVo-iS-WRo" secondAttribute="leading" id="27K-b8-3Oo"/>
+                                    <constraint firstItem="Ab7-Sh-3qe" firstAttribute="leading" secondItem="iVo-iS-WRo" secondAttribute="leading" constant="14" id="8Dx-Gw-rvQ"/>
+                                    <constraint firstItem="QmP-XP-HZI" firstAttribute="centerX" secondItem="iVo-iS-WRo" secondAttribute="centerX" id="Il3-1s-keF"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ab7-Sh-3qe" secondAttribute="trailing" constant="14" id="TMA-td-HQr"/>
+                                    <constraint firstItem="Y8u-gG-8jz" firstAttribute="top" secondItem="xcC-0D-dTr" secondAttribute="bottom" id="aKw-iD-acp"/>
+                                    <constraint firstAttribute="trailing" secondItem="ODY-lg-zhQ" secondAttribute="trailing" id="abl-0x-mMm"/>
+                                    <constraint firstItem="QmP-XP-HZI" firstAttribute="top" secondItem="iVo-iS-WRo" secondAttribute="top" constant="30" id="bTh-mR-MjD"/>
+                                    <constraint firstItem="xcC-0D-dTr" firstAttribute="top" secondItem="Ab7-Sh-3qe" secondAttribute="bottom" constant="15" id="cZ6-bX-T8l"/>
+                                    <constraint firstAttribute="bottom" secondItem="Y8u-gG-8jz" secondAttribute="bottom" id="hCt-IW-QhD"/>
+                                    <constraint firstItem="xcC-0D-dTr" firstAttribute="leading" secondItem="iVo-iS-WRo" secondAttribute="leading" constant="14" id="hig-Hs-jhi"/>
+                                    <constraint firstItem="QmP-XP-HZI" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="iVo-iS-WRo" secondAttribute="leading" constant="14" id="jcu-ak-Amb"/>
+                                    <constraint firstAttribute="trailing" secondItem="Y8u-gG-8jz" secondAttribute="trailing" id="ktt-pL-K5i"/>
+                                    <constraint firstAttribute="trailing" secondItem="9B7-MN-2c6" secondAttribute="trailing" id="lfH-YK-C6b"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="QmP-XP-HZI" secondAttribute="trailing" constant="14" id="mRw-DD-Uwa"/>
+                                    <constraint firstItem="Ab7-Sh-3qe" firstAttribute="top" secondItem="ODY-lg-zhQ" secondAttribute="bottom" id="nG9-J6-79z"/>
+                                    <constraint firstItem="9B7-MN-2c6" firstAttribute="top" secondItem="Ab7-Sh-3qe" secondAttribute="bottom" id="opa-RG-G4c"/>
+                                    <constraint firstItem="9B7-MN-2c6" firstAttribute="leading" secondItem="iVo-iS-WRo" secondAttribute="leading" id="pnH-61-hvP"/>
+                                    <constraint firstItem="ODY-lg-zhQ" firstAttribute="leading" secondItem="iVo-iS-WRo" secondAttribute="leading" id="rO4-u5-C5z"/>
+                                    <constraint firstItem="Ab7-Sh-3qe" firstAttribute="top" secondItem="QmP-XP-HZI" secondAttribute="bottom" constant="30" id="sOd-HF-UeL"/>
+                                    <constraint firstAttribute="trailing" secondItem="xcC-0D-dTr" secondAttribute="trailing" constant="14" id="tjU-mK-eJ9"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="iVo-iS-WRo" secondAttribute="trailing" constant="15" id="APQ-V8-IpI"/>
+                            <constraint firstItem="2nP-7D-FcG" firstAttribute="top" secondItem="iVo-iS-WRo" secondAttribute="bottom" constant="15" id="G33-9j-N5P"/>
+                            <constraint firstItem="iVo-iS-WRo" firstAttribute="top" secondItem="OUm-EF-nKy" secondAttribute="bottom" constant="15" id="uBc-Py-y8c"/>
+                            <constraint firstItem="iVo-iS-WRo" firstAttribute="leading" secondItem="ZdE-ax-P0N" secondAttribute="leading" constant="15" id="z4I-mG-GQs"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="c4h-1v-5yd"/>
+                    <connections>
+                        <outlet property="cardStatusLabel" destination="4cr-u2-WxS" id="Vlq-eR-bVK"/>
+                        <outlet property="cardStatusView" destination="KZI-OY-VsG" id="LIf-SK-fYg"/>
+                        <outlet property="commentTextView" destination="xcC-0D-dTr" id="c74-BN-m4H"/>
+                        <outlet property="contestButton" destination="bMD-zD-XE8" id="sNW-n7-S6M"/>
+                        <outlet property="merchantLabel" destination="sml-t2-UIc" id="pyV-Mc-sbF"/>
+                        <outlet property="merchantSwitch" destination="SAI-Uz-8TK" id="Lud-Wa-bG4"/>
+                        <outlet property="padlockView" destination="TZi-ab-Urz" id="29g-Nz-yA9"/>
+                        <outlet property="possessionLabel" destination="uiX-Dx-gca" id="UmP-EO-Cie"/>
+                        <outlet property="possessionSwitch" destination="aQS-0Q-AOg" id="shC-VC-puP"/>
+                        <outlet property="titleLabel" destination="QmP-XP-HZI" id="9qj-xM-U8s"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bbC-QS-yi9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1533.5999999999999" y="54.422788605697157"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="icon_chargeback_lock" width="144" height="201"/>
+        <image name="icon_switch_off" width="234" height="108"/>
+        <image name="icon_switch_on" width="234" height="108"/>
+    </resources>
 </document>

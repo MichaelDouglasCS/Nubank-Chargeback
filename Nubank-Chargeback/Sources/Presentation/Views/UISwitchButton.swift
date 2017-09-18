@@ -1,13 +1,12 @@
 //
-//  ReasonDetailBO.swift
+//  UISwitchButton.swift
 //  Nubank-Chargeback
 //
-//  Created by Michael Douglas on 16/09/17.
+//  Created by Michael Douglas on 17/09/17.
 //  Copyright © 2017 MichaelDouglas. All rights reserved.
 //
 
-import Foundation
-import ObjectMapper
+import UIKit
 
 //**********************************************************************************************************
 //
@@ -27,42 +26,31 @@ import ObjectMapper
 //
 //**********************************************************************************************************
 
-public class ReasonDetailBO: Mappable {
+@IBDesignable
+class UISwitchButton: UIButton {
 
-	public enum Reason: String {
-		case merchant = "merchant_recognized"
-		case possession = "card_in_possession"
-	}
-	
 //*************************************************
 // MARK: - Properties
 //*************************************************
 
-	public var id: String?
-	public var title: String?
-	public var response: Bool?
+	@IBInspectable
+	var isOn: Bool = false {
+		didSet {
+			self.isSelected = isOn
+		}
+	}
 	
 //*************************************************
 // MARK: - Constructors
 //*************************************************
-	
-	public required init() { }
-	
-	public required init?(map: Map) { }
 
 //*************************************************
 // MARK: - Protected Methods
 //*************************************************
-
+	
 //*************************************************
 // MARK: - Exposed Methods
 //*************************************************
-	
-	public func mapping(map: Map) {
-		self.id <- map["id"]
-		self.title <- map["title"]
-		self.response <- map["response"]
-	}
 
 //*************************************************
 // MARK: - Overridden Public Methods
@@ -75,11 +63,3 @@ public class ReasonDetailBO: Mappable {
 // MARK: - Extension -
 //
 //**********************************************************************************************************
-
-extension ReasonDetailBO {
-	
-	var reason: ReasonDetailBO.Reason? {
-		let reason = self.id ?? ""
-		return Reason(rawValue: reason)
-	}
-}

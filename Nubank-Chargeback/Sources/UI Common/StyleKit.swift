@@ -18,6 +18,10 @@ extension UIColor {
 	
 	struct NubankChargeback {
 		static var purple: UIColor { return UIColor(hexadecimal: 0x6E2B77) }
+		static var green: UIColor { return UIColor(hexadecimal: 0x417505) }
+		static var black: UIColor { return UIColor(hexadecimal: 0x222222) }
+		static var hint: UIColor { return UIColor(hexadecimal: 0x999999) }
+		static var disabledGray: UIColor { return UIColor(hexadecimal: 0xCCCCCC) }
 	}
 	
 	convenience init(hexadecimal: Int) {

@@ -36,7 +36,7 @@ public class ChargebackBO: Mappable {
 	public var id: String?
 	public var title: String?
 	public var autoblock: Bool?
-	public var reason_details: [ReasonDetailBO?] = []
+	public var reason_details: [ReasonDetailBO] = []
 	public var comment_hint: String?
 	public var comment: String?
 
