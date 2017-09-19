@@ -32,7 +32,7 @@ Showing up the agreed error codes and messages for each of the known scenarios.
 public enum ServerResponse {
 	
 	public enum Error: String {
-		case unkown = "Server Error"
+		case unkown = "Erro de Servidor"
 	}
 	
 	case success

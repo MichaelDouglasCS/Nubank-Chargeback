@@ -57,7 +57,7 @@ class NoticeVC: UIViewController {
 				self.updateLayout()
 				self.containerView(isHidden: false)
 			case .error(let error):
-				self.showInfoAlert(title: "Sorry! :(", message: error.rawValue)
+				self.showInfoAlert(title: "Desculpe-nos! :(", message: error.rawValue)
 			}
 			self.removeActivityIndicator()
 		}
@@ -114,7 +114,7 @@ class NoticeVC: UIViewController {
 					self.performSegue(withIdentifier: "showChargeback", sender: nil)
 				}
 			case .error(let error):
-				self.showInfoAlert(title: "Sorry! :(", message: error.rawValue)
+				self.showInfoAlert(title: "Desculpe-nos! :(", message: error.rawValue)
 			}
 			self.loadingContinueButton(isShow: false)
 		}

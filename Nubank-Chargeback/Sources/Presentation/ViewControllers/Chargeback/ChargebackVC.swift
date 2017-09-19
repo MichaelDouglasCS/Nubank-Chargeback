@@ -103,7 +103,7 @@ class ChargebackVC: UIViewController {
 				case .success:
 					self.updatePadlockLayout()
 				case .error(let error):
-					self.showInfoAlert(title: "Sorry! :(", message: error.rawValue)
+					self.showInfoAlert(title: "Desculpe-nos! :(", message: error.rawValue)
 				}
 				self.loadingPadlock(inProgress: false)
 			}
@@ -114,7 +114,7 @@ class ChargebackVC: UIViewController {
 				case .success:
 					self.updatePadlockLayout()
 				case .error(let error):
-					self.showInfoAlert(title: "Sorry! :(", message: error.rawValue)
+					self.showInfoAlert(title: "Desculpe-nos! :(", message: error.rawValue)
 				}
 				self.loadingPadlock(inProgress: false)
 			}
@@ -170,7 +170,7 @@ class ChargebackVC: UIViewController {
 					self.performSegue(withIdentifier: "showFinishChargeback", sender: nil)
 				}
 			case .error(let error):
-				self.showInfoAlert(title: "Sorry! :(", message: error.rawValue)
+				self.showInfoAlert(title: "Desculpe-nos! :(", message: error.rawValue)
 			}
 			self.loadingContestButton(isShow: false)
 		}
