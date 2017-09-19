@@ -56,11 +56,10 @@ class NoticeVC: UIViewController {
 			case .success:
 				self.updateLayout()
 				self.containerView(isHidden: false)
-				self.removeActivityIndicator()
 			case .error(let error):
 				self.showInfoAlert(title: "Sorry! :(", message: error.rawValue)
-				break
 			}
+			self.removeActivityIndicator()
 		}
 	}
 	

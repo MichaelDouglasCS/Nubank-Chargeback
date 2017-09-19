@@ -97,7 +97,6 @@ class ChargebackVC: UIViewController {
 		self.loadingPadlock(inProgress: true)
 		
 		if isCardBlocked {
-			
 			ChargebackLO.sharedInstance.unblockCard() { (result) in
 				
 				switch result {
