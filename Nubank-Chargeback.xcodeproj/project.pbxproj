@@ -7,11 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		611ED57A1F6F330B00B1FD4C /* ChargebackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611ED5791F6F330B00B1FD4C /* ChargebackViewController.swift */; };
+		611ED57A1F6F330B00B1FD4C /* ChargebackVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611ED5791F6F330B00B1FD4C /* ChargebackVC.swift */; };
 		611ED57C1F6F344200B1FD4C /* UISwitchButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611ED57B1F6F344200B1FD4C /* UISwitchButton.swift */; };
+		618F9E841F7037C700AEEDBE /* KeyboardKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618F9E831F7037C700AEEDBE /* KeyboardKit.swift */; };
+		61C8F84C1F708CBB006E8CB8 /* FinishChargebackVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C8F84B1F708CBB006E8CB8 /* FinishChargebackVC.swift */; };
 		61F5EB961F6C4EE1000F1CE1 /* UIBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F5EB951F6C4EE1000F1CE1 /* UIBox.swift */; };
 		61F5EB9B1F6C57E3000F1CE1 /* IBDesignableClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F5EB991F6C57E3000F1CE1 /* IBDesignableClass.swift */; };
-		61F5EB9F1F6C61FE000F1CE1 /* NoticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F5EB9E1F6C61FE000F1CE1 /* NoticeViewController.swift */; };
+		61F5EB9F1F6C61FE000F1CE1 /* NoticeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F5EB9E1F6C61FE000F1CE1 /* NoticeVC.swift */; };
 		61F78A381F6B77FB00F94CB0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F78A371F6B77FB00F94CB0 /* AppDelegate.swift */; };
 		61F78A3F1F6B77FB00F94CB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61F78A3E1F6B77FB00F94CB0 /* Assets.xcassets */; };
 		61F78A4D1F6B77FB00F94CB0 /* Nubank_ChargebackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F78A4C1F6B77FB00F94CB0 /* Nubank_ChargebackTests.swift */; };
@@ -53,11 +55,13 @@
 /* Begin PBXFileReference section */
 		12FE775AD09E49406994A1A9 /* Pods-Nubank-ChargebackTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nubank-ChargebackTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Nubank-ChargebackTests/Pods-Nubank-ChargebackTests.release.xcconfig"; sourceTree = "<group>"; };
 		184C1E4CE4E11AC274B0099D /* Pods_Nubank_Chargeback.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nubank_Chargeback.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		611ED5791F6F330B00B1FD4C /* ChargebackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChargebackViewController.swift; sourceTree = "<group>"; };
+		611ED5791F6F330B00B1FD4C /* ChargebackVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChargebackVC.swift; sourceTree = "<group>"; };
 		611ED57B1F6F344200B1FD4C /* UISwitchButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UISwitchButton.swift; sourceTree = "<group>"; };
+		618F9E831F7037C700AEEDBE /* KeyboardKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardKit.swift; sourceTree = "<group>"; };
+		61C8F84B1F708CBB006E8CB8 /* FinishChargebackVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinishChargebackVC.swift; sourceTree = "<group>"; };
 		61F5EB951F6C4EE1000F1CE1 /* UIBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIBox.swift; sourceTree = "<group>"; };
 		61F5EB991F6C57E3000F1CE1 /* IBDesignableClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBDesignableClass.swift; sourceTree = "<group>"; };
-		61F5EB9E1F6C61FE000F1CE1 /* NoticeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoticeViewController.swift; sourceTree = "<group>"; };
+		61F5EB9E1F6C61FE000F1CE1 /* NoticeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoticeVC.swift; sourceTree = "<group>"; };
 		61F78A341F6B77FB00F94CB0 /* Nubank-Chargeback.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Nubank-Chargeback.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		61F78A371F6B77FB00F94CB0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		61F78A3E1F6B77FB00F94CB0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -120,8 +124,9 @@
 		61F5EB9D1F6C61A6000F1CE1 /* Chargeback */ = {
 			isa = PBXGroup;
 			children = (
-				611ED5791F6F330B00B1FD4C /* ChargebackViewController.swift */,
-				61F5EB9E1F6C61FE000F1CE1 /* NoticeViewController.swift */,
+				611ED5791F6F330B00B1FD4C /* ChargebackVC.swift */,
+				61C8F84B1F708CBB006E8CB8 /* FinishChargebackVC.swift */,
+				61F5EB9E1F6C61FE000F1CE1 /* NoticeVC.swift */,
 			);
 			path = Chargeback;
 			sourceTree = "<group>";
@@ -273,6 +278,7 @@
 			isa = PBXGroup;
 			children = (
 				61F8F8CA1F6EFDEF00B6E1F4 /* AlertKit.swift */,
+				618F9E831F7037C700AEEDBE /* KeyboardKit.swift */,
 				61F8F8C81F6CF54B00B6E1F4 /* StringKit.swift */,
 				61F8F8C61F6CF21200B6E1F4 /* StyleKit.swift */,
 			);
@@ -669,16 +675,18 @@
 				61F8F8BD1F6CBCAF00B6E1F4 /* ChargebackBO.swift in Sources */,
 				61F8F8BF1F6CBD2700B6E1F4 /* NoticeBO.swift in Sources */,
 				61F5EB961F6C4EE1000F1CE1 /* UIBox.swift in Sources */,
+				61C8F84C1F708CBB006E8CB8 /* FinishChargebackVC.swift in Sources */,
 				61F8F8C51F6CEBE800B6E1F4 /* ReasonDetailBO.swift in Sources */,
 				61F8F8B71F6C9C4D00B6E1F4 /* ServerRequest.swift in Sources */,
+				618F9E841F7037C700AEEDBE /* KeyboardKit.swift in Sources */,
 				61F8F8C71F6CF21200B6E1F4 /* StyleKit.swift in Sources */,
 				61F8F8BB1F6CBAC800B6E1F4 /* ChargebackLO.swift in Sources */,
-				61F5EB9F1F6C61FE000F1CE1 /* NoticeViewController.swift in Sources */,
+				61F5EB9F1F6C61FE000F1CE1 /* NoticeVC.swift in Sources */,
 				61F8F8B91F6CB8A200B6E1F4 /* NoticeLO.swift in Sources */,
 				61F8F8C91F6CF54B00B6E1F4 /* StringKit.swift in Sources */,
 				611ED57C1F6F344200B1FD4C /* UISwitchButton.swift in Sources */,
 				61F8F8CB1F6EFDEF00B6E1F4 /* AlertKit.swift in Sources */,
-				611ED57A1F6F330B00B1FD4C /* ChargebackViewController.swift in Sources */,
+				611ED57A1F6F330B00B1FD4C /* ChargebackVC.swift in Sources */,
 				61F8F8C31F6CE1D800B6E1F4 /* ActionBO.swift in Sources */,
 				61F5EB9B1F6C57E3000F1CE1 /* IBDesignableClass.swift in Sources */,
 			);

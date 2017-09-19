@@ -64,6 +64,25 @@ extension String{
 		return try? NSAttributedString(data: stringData, options: options, documentAttributes: nil)
 	}
 	
+	var clearHTML: String {
+		var result = self
+		let pattern = "(\\<(\\/?[^\\>]+)\\>)"
+		let options: NSRegularExpression.Options = [.caseInsensitive,
+		                                            .dotMatchesLineSeparators,
+		                                            .anchorsMatchLines]
+		
+		if let regex = try? NSRegularExpression(pattern: pattern, options: options) {
+			let fullRange = NSRange(location: 0, length: self.characters.count)
+			
+			result = regex.stringByReplacingMatches(in: self,
+			                                        options: [],
+			                                        range: fullRange,
+			                                        withTemplate: "")
+		}
+		
+		return result
+	}
+	
 	public func replace(pattern: String, template: String) -> String {
 		var result = self
 		

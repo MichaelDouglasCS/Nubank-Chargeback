@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import SwiftyJSON
 
 //**********************************************************************************************************
 //
@@ -35,7 +36,7 @@ public final class ChargebackLO {
 	static public let sharedInstance: ChargebackLO = ChargebackLO()
 	
 	public var current: ChargebackBO?
-	public var cardIsBlocked: Bool?
+	public var isCardBlocked: Bool?
 	
 //*************************************************
 // MARK: - Constructors
@@ -46,6 +47,13 @@ public final class ChargebackLO {
 //*************************************************
 // MARK: - Protected Methods
 //*************************************************
+	
+	private func parse(json: JSON) {
+		
+		if let json = json.dictionaryObject {
+			self.current = ChargebackBO(JSON: json)
+		}
+	}
 
 //*************************************************
 // MARK: - Exposed Methods
@@ -53,9 +61,55 @@ public final class ChargebackLO {
 	
 	public func load(completionHandler: @escaping LogicResult) {
 		ServerRequest.API.chargeback.execute() { (json, result) in
+			DispatchQueue.global().async {
+				self.parse(json: json)
+				
+				if self.current?.autoblock ?? false {
+					
+					self.blockCard() { (result) in
+						DispatchQueue.main.async {
+							completionHandler(result)
+						}
+					}
+				} else {
+					DispatchQueue.main.async {
+						completionHandler(result)
+					}
+				}
+			}
+		}
+	}
+	
+	public func submit(completionHandler: @escaping LogicResult) {
+		
+		if let params = self.current?.toJSON() {
+			ServerRequest.API.sendChargeback.execute(params: params) { (_, result) in
+				completionHandler(result)
+			}
+		}
+	}
+	
+	public func blockCard(completionHandler: @escaping LogicResult) {
+		ServerRequest.API.blockCard.execute() { (_, result) in
+
+			switch result {
+			case .success:
+				self.isCardBlocked = true
+			case .error:
+				self.isCardBlocked = false
+			}
+			completionHandler(result)
+		}
+	}
+	
+	public func unblockCard(completionHandler: @escaping LogicResult) {
+		ServerRequest.API.unblockCard.execute() { (_, result) in
 			
-			if let json = json.dictionaryObject {
-				self.current = ChargebackBO(JSON: json)
+			switch result {
+			case .success:
+				self.isCardBlocked = false
+			case .error:
+				self.isCardBlocked = true
 			}
 			completionHandler(result)
 		}
@@ -69,6 +123,22 @@ public final class ChargebackLO {
 
 //**********************************************************************************************************
 //
-// MARK: - Extension -
+// MARK: - Extension - ChargebackBO
 //
 //**********************************************************************************************************
+
+extension ChargebackBO {
+	
+	func update(reason received: ReasonDetailBO.Reason, with response: Bool) {
+		
+		self.reason_details.forEach({ (reason) in
+			
+			switch received {
+			case .merchant:
+				reason.response = response
+			case .possession:
+				reason.response = response
+			}
+		})
+	}
+}

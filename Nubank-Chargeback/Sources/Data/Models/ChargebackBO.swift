@@ -8,6 +8,7 @@
 
 import Foundation
 import ObjectMapper
+import SwiftyJSON
 
 //**********************************************************************************************************
 //
@@ -63,6 +64,20 @@ public class ChargebackBO: Mappable {
 		self.reason_details <- map["reason_details"]
 		self.comment_hint <- map["comment_hint"]
 		self.comment <- map["comment"]
+	}
+	
+	public func toJSON() -> [String : Any] {
+		var json: JSON = [:]
+		
+		if let comment = self.comment {
+			json["comment"] = JSON(comment)
+		}
+		
+		if !self.reason_details.isEmpty {
+			json["reason_details"] = JSON(self.reason_details.map { $0.toJSON() })
+		}
+		
+		return json.dictionaryObject ?? [:]
 	}
 
 //*************************************************

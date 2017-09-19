@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Notice View Controller-->
+        <!--NoticeVC-->
         <scene sceneID="nh6-4O-3sg">
             <objects>
-                <viewController id="w2H-ff-w73" customClass="NoticeViewController" customModule="Nubank_Chargeback" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="w2H-ff-w73" customClass="NoticeVC" customModule="Nubank_Chargeback" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hSu-9j-kdT"/>
                         <viewControllerLayoutGuide type="bottom" id="7PF-dr-fW7"/>
@@ -55,7 +55,6 @@
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="continueAction:" destination="w2H-ff-w73" eventType="touchUpInside" id="NR4-2l-0gk"/>
-                                                    <segue destination="I7A-QR-6k8" kind="show" id="lMf-b1-v9p"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Ub-o2-YIS">
@@ -110,6 +109,7 @@
                         <outlet property="contentTextView" destination="mlw-6d-y5f" id="Afa-m8-E1T"/>
                         <outlet property="continueButton" destination="6xw-Gj-BQ2" id="ofa-4H-GRA"/>
                         <outlet property="titleLabel" destination="tgj-1v-HmH" id="sM3-hl-cDS"/>
+                        <segue destination="I7A-QR-6k8" kind="show" identifier="showChargeback" id="wl5-bk-Cv8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3kM-dC-fpm" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -134,10 +134,10 @@
             </objects>
             <point key="canvasLocation" x="39.200000000000003" y="56.221889055472268"/>
         </scene>
-        <!--Chargeback View Controller-->
+        <!--ChargebackVC-->
         <scene sceneID="n8Q-aN-wY5">
             <objects>
-                <viewController id="I7A-QR-6k8" customClass="ChargebackViewController" customModule="Nubank_Chargeback" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="I7A-QR-6k8" customClass="ChargebackVC" customModule="Nubank_Chargeback" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="OUm-EF-nKy"/>
                         <viewControllerLayoutGuide type="bottom" id="2nP-7D-FcG"/>
@@ -164,37 +164,40 @@
                                         </constraints>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="Ab7-Sh-3qe">
-                                        <rect key="frame" x="14" y="80.5" width="317" height="150"/>
+                                        <rect key="frame" x="14" y="80.5" width="317" height="154"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="TZi-ab-Urz">
-                                                <rect key="frame" x="0.0" y="0.0" width="317" height="52"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="317" height="71.5"/>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_chargeback_lock" translatesAutoresizingMaskIntoConstraints="NO" id="KZI-OY-VsG">
-                                                        <rect key="frame" x="0.0" y="13.5" width="19" height="25"/>
+                                                        <rect key="frame" x="0.0" y="23.5" width="19" height="25"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="25" id="4HI-5h-zxf"/>
                                                             <constraint firstAttribute="width" constant="19" id="rlz-wZ-U8M"/>
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Card Status Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4cr-u2-WxS">
-                                                        <rect key="frame" x="31" y="16.5" width="286" height="19.5"/>
+                                                        <rect key="frame" x="31" y="26" width="286" height="19.5"/>
                                                         <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="14"/>
                                                         <color key="textColor" red="0.83529411764705885" green="0.090196078431372548" blue="0.10588235294117647" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="df9-Yd-hKd"/>
+                                                </constraints>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="e2m-lq-5ee">
-                                                <rect key="frame" x="0.0" y="52" width="317" height="49"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="e2m-lq-5ee">
+                                                <rect key="frame" x="0.0" y="71.5" width="317" height="41.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Card Merchant Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sml-t2-UIc">
-                                                        <rect key="frame" x="0.0" y="15" width="266" height="19.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="266" height="19.5"/>
                                                         <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="14"/>
                                                         <color key="textColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SAI-Uz-8TK" customClass="UISwitchButton" customModule="Nubank_Chargeback" customModuleProvider="target">
-                                                        <rect key="frame" x="266" y="13" width="51" height="23"/>
+                                                        <rect key="frame" x="266" y="0.0" width="51" height="23"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="23" id="St6-44-PRT"/>
                                                             <constraint firstAttribute="width" constant="51" id="Xec-Iu-aG0"/>
@@ -210,17 +213,17 @@
                                                     </button>
                                                 </subviews>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="5bg-KF-awI">
-                                                <rect key="frame" x="0.0" y="101" width="317" height="49"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="5bg-KF-awI">
+                                                <rect key="frame" x="0.0" y="113" width="317" height="41"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Card Possession Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uiX-Dx-gca">
-                                                        <rect key="frame" x="0.0" y="15" width="266" height="19.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="266" height="19.5"/>
                                                         <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="14"/>
                                                         <color key="textColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aQS-0Q-AOg" customClass="UISwitchButton" customModule="Nubank_Chargeback" customModuleProvider="target">
-                                                        <rect key="frame" x="266" y="13" width="51" height="23"/>
+                                                        <rect key="frame" x="266" y="0.0" width="51" height="23"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="23" id="uGy-mh-6EQ"/>
                                                             <constraint firstAttribute="width" constant="51" id="ydG-vs-Mqq"/>
@@ -238,11 +241,11 @@
                                             </stackView>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="150" id="pHh-A9-pX4"/>
+                                            <constraint firstAttribute="height" constant="154" id="pHh-A9-pX4"/>
                                         </constraints>
                                     </stackView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9B7-MN-2c6">
-                                        <rect key="frame" x="0.0" y="230.5" width="345" height="1"/>
+                                        <rect key="frame" x="0.0" y="234.5" width="345" height="1"/>
                                         <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="tintColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
@@ -250,11 +253,14 @@
                                         </constraints>
                                     </view>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Comment" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="xcC-0D-dTr">
-                                        <rect key="frame" x="14" y="245.5" width="317" height="301.5"/>
+                                        <rect key="frame" x="14" y="249.5" width="317" height="297.5"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="16"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="I7A-QR-6k8" id="T9d-hS-ZrT"/>
+                                        </connections>
                                     </textView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="Y8u-gG-8jz">
                                         <rect key="frame" x="0.0" y="547" width="345" height="70"/>
@@ -269,11 +275,14 @@
                                                     <action selector="cancelAction:" destination="I7A-QR-6k8" eventType="touchUpInside" id="EyC-mp-nPp"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bMD-zD-XE8">
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bMD-zD-XE8">
                                                 <rect key="frame" x="164.5" y="0.0" width="180.5" height="70"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
                                                 <state key="normal" title="CONTESTAR">
-                                                    <color key="titleColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="titleColor" red="0.43137254899999999" green="0.16862745100000001" blue="0.46666666670000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <state key="disabled">
+                                                    <color key="titleColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="contestAction:" destination="I7A-QR-6k8" eventType="touchUpInside" id="OLx-Az-JU6"/>
@@ -289,6 +298,7 @@
                                 <constraints>
                                     <constraint firstItem="Y8u-gG-8jz" firstAttribute="leading" secondItem="iVo-iS-WRo" secondAttribute="leading" id="27K-b8-3Oo"/>
                                     <constraint firstItem="Ab7-Sh-3qe" firstAttribute="leading" secondItem="iVo-iS-WRo" secondAttribute="leading" constant="14" id="8Dx-Gw-rvQ"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="617" id="CkP-Ky-1tg"/>
                                     <constraint firstItem="QmP-XP-HZI" firstAttribute="centerX" secondItem="iVo-iS-WRo" secondAttribute="centerX" id="Il3-1s-keF"/>
                                     <constraint firstAttribute="trailing" secondItem="Ab7-Sh-3qe" secondAttribute="trailing" constant="14" id="TMA-td-HQr"/>
                                     <constraint firstItem="Y8u-gG-8jz" firstAttribute="top" secondItem="xcC-0D-dTr" secondAttribute="bottom" id="aKw-iD-acp"/>
@@ -319,7 +329,7 @@
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="iVo-iS-WRo" secondAttribute="trailing" constant="15" id="APQ-V8-IpI"/>
                             <constraint firstItem="2nP-7D-FcG" firstAttribute="top" secondItem="iVo-iS-WRo" secondAttribute="bottom" constant="15" id="G33-9j-N5P"/>
-                            <constraint firstItem="iVo-iS-WRo" firstAttribute="top" secondItem="OUm-EF-nKy" secondAttribute="bottom" constant="15" id="uBc-Py-y8c"/>
+                            <constraint firstItem="iVo-iS-WRo" firstAttribute="top" secondItem="OUm-EF-nKy" secondAttribute="bottom" priority="750" constant="15" id="uBc-Py-y8c"/>
                             <constraint firstItem="iVo-iS-WRo" firstAttribute="leading" secondItem="ZdE-ax-P0N" secondAttribute="leading" constant="15" id="z4I-mG-GQs"/>
                         </constraints>
                     </view>
@@ -329,17 +339,98 @@
                         <outlet property="cardStatusView" destination="KZI-OY-VsG" id="LIf-SK-fYg"/>
                         <outlet property="commentTextView" destination="xcC-0D-dTr" id="c74-BN-m4H"/>
                         <outlet property="contestButton" destination="bMD-zD-XE8" id="sNW-n7-S6M"/>
+                        <outlet property="footerConstraint" destination="G33-9j-N5P" id="8bv-B7-Fe6"/>
                         <outlet property="merchantLabel" destination="sml-t2-UIc" id="pyV-Mc-sbF"/>
                         <outlet property="merchantSwitch" destination="SAI-Uz-8TK" id="Lud-Wa-bG4"/>
                         <outlet property="padlockView" destination="TZi-ab-Urz" id="29g-Nz-yA9"/>
                         <outlet property="possessionLabel" destination="uiX-Dx-gca" id="UmP-EO-Cie"/>
                         <outlet property="possessionSwitch" destination="aQS-0Q-AOg" id="shC-VC-puP"/>
                         <outlet property="titleLabel" destination="QmP-XP-HZI" id="9qj-xM-U8s"/>
+                        <segue destination="8Ys-5q-DhT" kind="presentation" identifier="showFinishChargeback" modalTransitionStyle="crossDissolve" id="cpy-3L-XB1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bbC-QS-yi9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1533.5999999999999" y="54.422788605697157"/>
+        </scene>
+        <!--Finish ChargebackVC-->
+        <scene sceneID="AUf-Oc-ZhM">
+            <objects>
+                <viewController id="8Ys-5q-DhT" customClass="FinishChargebackVC" customModule="Nubank_Chargeback" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fb5-8j-tzY"/>
+                        <viewControllerLayoutGuide type="bottom" id="iyv-SS-29Z"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="NqN-tV-dcp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9tf-7E-D8q" userLabel="Container" customClass="UIBox" customModule="Nubank_Chargeback" customModuleProvider="target">
+                                <rect key="frame" x="15" y="188.5" width="345" height="290"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contestação de compra recebida" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q3a-tq-pXs">
+                                        <rect key="frame" x="76.5" y="30" width="192" height="68.5"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="25"/>
+                                        <color key="textColor" red="0.43137254899999999" green="0.16862745100000001" blue="0.46666666670000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Fique de olho no seu email! Nos próximos 3 dias você deverá receber um primeiro retorno sobre sua contestação." textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z3W-fK-n7L">
+                                        <rect key="frame" x="14" y="108.5" width="317" height="90"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="90" id="ydV-Lz-BU7"/>
+                                        </constraints>
+                                        <color key="textColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="irQ-y1-5j3">
+                                        <rect key="frame" x="90" y="225" width="164.5" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="164.5" id="0Ci-gd-GJt"/>
+                                            <constraint firstAttribute="height" constant="50" id="YeU-cD-2Oy"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="15"/>
+                                        <state key="normal" title="FECHAR">
+                                            <color key="titleColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="Z3W-fK-n7L" firstAttribute="leading" secondItem="9tf-7E-D8q" secondAttribute="leading" constant="14" id="1ih-EH-kIW"/>
+                                    <constraint firstItem="Q3a-tq-pXs" firstAttribute="centerX" secondItem="9tf-7E-D8q" secondAttribute="centerX" id="4Gu-uv-mgb"/>
+                                    <constraint firstItem="Q3a-tq-pXs" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="9tf-7E-D8q" secondAttribute="leading" constant="14" id="Pdx-pT-47E"/>
+                                    <constraint firstItem="Q3a-tq-pXs" firstAttribute="top" secondItem="9tf-7E-D8q" secondAttribute="top" constant="30" id="R3x-3l-5ZO"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Q3a-tq-pXs" secondAttribute="trailing" constant="50" id="anD-m0-q7s"/>
+                                    <constraint firstItem="irQ-y1-5j3" firstAttribute="centerX" secondItem="9tf-7E-D8q" secondAttribute="centerX" id="lII-8T-b5c"/>
+                                    <constraint firstItem="Z3W-fK-n7L" firstAttribute="top" secondItem="Q3a-tq-pXs" secondAttribute="bottom" constant="10" id="lx7-em-2u7"/>
+                                    <constraint firstAttribute="trailing" secondItem="Z3W-fK-n7L" secondAttribute="trailing" constant="14" id="mP8-JA-gV8"/>
+                                    <constraint firstAttribute="height" constant="290" id="met-1W-9Gs"/>
+                                    <constraint firstAttribute="bottom" secondItem="irQ-y1-5j3" secondAttribute="bottom" constant="15" id="xxd-af-Lsb"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="9tf-7E-D8q" secondAttribute="trailing" constant="15" id="HtS-mK-ddM"/>
+                            <constraint firstItem="9tf-7E-D8q" firstAttribute="leading" secondItem="NqN-tV-dcp" secondAttribute="leading" constant="15" id="RRy-tj-m9k"/>
+                            <constraint firstItem="9tf-7E-D8q" firstAttribute="centerY" secondItem="NqN-tV-dcp" secondAttribute="centerY" id="ah4-65-wwX"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="5ZM-Ch-OTK"/>
+                    <connections>
+                        <outlet property="containerView" destination="9tf-7E-D8q" id="fhD-bb-CeX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bJL-ef-6O3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2268" y="53.523238380809602"/>
         </scene>
     </scenes>
     <resources>

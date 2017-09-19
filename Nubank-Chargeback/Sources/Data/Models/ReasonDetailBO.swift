@@ -8,6 +8,7 @@
 
 import Foundation
 import ObjectMapper
+import SwiftyJSON
 
 //**********************************************************************************************************
 //
@@ -40,7 +41,7 @@ public class ReasonDetailBO: Mappable {
 
 	public var id: String?
 	public var title: String?
-	public var response: Bool?
+	public var response: Bool = false
 	
 //*************************************************
 // MARK: - Constructors
@@ -62,6 +63,18 @@ public class ReasonDetailBO: Mappable {
 		self.id <- map["id"]
 		self.title <- map["title"]
 		self.response <- map["response"]
+	}
+	
+	public func toJSON() -> [String : Any] {
+		
+		var json: JSON = [:]
+		
+		if let id = self.id {
+			json["id"] = JSON(id)
+			json["response"] = JSON(self.response)
+		}
+		
+		return json.dictionaryObject ?? [:]
 	}
 
 //*************************************************

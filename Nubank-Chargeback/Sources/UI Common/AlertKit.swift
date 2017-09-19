@@ -64,3 +64,35 @@ extension UIViewController {
 		})
 	}
 }
+
+//**********************************************************************************************************
+//
+// MARK: - Extension - UIView
+//
+//**********************************************************************************************************
+
+extension UIView {
+	
+	func loadingIndicatorView(isShow: Bool, with color: UIColor = UIColor.white, at point: CGPoint? = nil) {
+		
+		if isShow {
+			let activityStyle = UIActivityIndicatorViewStyle.white
+			let activity = UIActivityIndicatorView(activityIndicatorStyle: activityStyle)
+			let viewHeight = self.frame.height
+			let viewWidth = self.frame.width
+			
+			activity.color = color
+			activity.center = CGPoint(x: point?.x ?? (viewWidth/2), y: point?.y ?? (viewHeight/2))
+			
+			self.addSubview(activity)
+			activity.startAnimating()
+		} else {
+			self.subviews.forEach({
+				
+				if let activity = $0 as? UIActivityIndicatorView {
+					activity.removeFromSuperview()
+				}
+			})
+		}
+	}
+}

@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import SwiftyJSON
 
 //**********************************************************************************************************
 //
@@ -46,17 +47,26 @@ public final class NoticeLO {
 // MARK: - Protected Methods
 //*************************************************
 
+	private func parse(json: JSON) {
+		
+		if let json = json.dictionaryObject {
+			self.current = NoticeBO(JSON: json)
+		}
+	}
+	
 //*************************************************
 // MARK: - Exposed Methods
 //*************************************************
 	
 	public func load(completionHandler: @escaping LogicResult) {
 		ServerRequest.API.notice.execute() { (json, result) in
-			
-			if let json = json.dictionaryObject {
-				self.current = NoticeBO(JSON: json)
+			DispatchQueue.global().async {
+				self.parse(json: json)
+				
+				DispatchQueue.main.async {
+					completionHandler(result)
+				}
 			}
-			completionHandler(result)
 		}
 	}
 
