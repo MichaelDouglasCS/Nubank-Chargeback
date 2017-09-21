@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2C858F30D58ED12E831B6303 /* Pods_Nubank_ChargebackUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA95445863351E501FC33247 /* Pods_Nubank_ChargebackUITests.framework */; };
 		611ED57A1F6F330B00B1FD4C /* ChargebackVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611ED5791F6F330B00B1FD4C /* ChargebackVC.swift */; };
 		611ED57C1F6F344200B1FD4C /* UISwitchButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611ED57B1F6F344200B1FD4C /* UISwitchButton.swift */; };
 		615EBBDC1F734318005A2728 /* chargeback.json in Resources */ = {isa = PBXBuildFile; fileRef = 615EBBDA1F734318005A2728 /* chargeback.json */; };
@@ -36,8 +35,9 @@
 		61F8F8C71F6CF21200B6E1F4 /* StyleKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F8F8C61F6CF21200B6E1F4 /* StyleKit.swift */; };
 		61F8F8C91F6CF54B00B6E1F4 /* StringKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F8F8C81F6CF54B00B6E1F4 /* StringKit.swift */; };
 		61F8F8CB1F6EFDEF00B6E1F4 /* AlertKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F8F8CA1F6EFDEF00B6E1F4 /* AlertKit.swift */; };
-		CAC54CC1F1CF70BC45C1B27A /* Pods_Nubank_Chargeback.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFEC2A332B7123A30AB88BFF /* Pods_Nubank_Chargeback.framework */; };
-		D859A00E225F044F03FE6076 /* Pods_Nubank_ChargebackTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 999A428738293819F58B16D0 /* Pods_Nubank_ChargebackTests.framework */; };
+		83CA76B0F8F6022E9FBE9266 /* Pods_Nubank_ChargebackTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 510026C7850DCF62C436A64B /* Pods_Nubank_ChargebackTests.framework */; };
+		D1A412C0F37681AD2BF14007 /* Pods_Nubank_Chargeback.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A86739B4D766E1F9C85EC6D8 /* Pods_Nubank_Chargeback.framework */; };
+		E60F6B02560B20E3946B9489 /* Pods_Nubank_ChargebackUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 062B49451896DCDBD4CAA0AD /* Pods_Nubank_ChargebackUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +58,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		062B49451896DCDBD4CAA0AD /* Pods_Nubank_ChargebackUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nubank_ChargebackUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0862B580C6A96C22113C7D4A /* Pods-Nubank-ChargebackTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nubank-ChargebackTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Nubank-ChargebackTests/Pods-Nubank-ChargebackTests.release.xcconfig"; sourceTree = "<group>"; };
+		08F9EBCE224C044B15C34840 /* Pods-Nubank-ChargebackTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nubank-ChargebackTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Nubank-ChargebackTests/Pods-Nubank-ChargebackTests.debug.xcconfig"; sourceTree = "<group>"; };
+		0F86C04FB01142A9131991D7 /* Pods-Nubank-ChargebackUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nubank-ChargebackUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Nubank-ChargebackUITests/Pods-Nubank-ChargebackUITests.release.xcconfig"; sourceTree = "<group>"; };
+		37DB65F1EC50E5220A2CCAD2 /* Pods-Nubank-Chargeback.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nubank-Chargeback.release.xcconfig"; path = "Pods/Target Support Files/Pods-Nubank-Chargeback/Pods-Nubank-Chargeback.release.xcconfig"; sourceTree = "<group>"; };
+		510026C7850DCF62C436A64B /* Pods_Nubank_ChargebackTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nubank_ChargebackTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		611ED5791F6F330B00B1FD4C /* ChargebackVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChargebackVC.swift; sourceTree = "<group>"; };
 		611ED57B1F6F344200B1FD4C /* UISwitchButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UISwitchButton.swift; sourceTree = "<group>"; };
 		615EBBDA1F734318005A2728 /* chargeback.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = chargeback.json; sourceTree = "<group>"; };
@@ -93,15 +99,9 @@
 		61F8F8C61F6CF21200B6E1F4 /* StyleKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StyleKit.swift; sourceTree = "<group>"; };
 		61F8F8C81F6CF54B00B6E1F4 /* StringKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringKit.swift; sourceTree = "<group>"; };
 		61F8F8CA1F6EFDEF00B6E1F4 /* AlertKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertKit.swift; sourceTree = "<group>"; };
-		8D7A1AB97142A124FD206CF6 /* Pods-Nubank-ChargebackUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nubank-ChargebackUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Nubank-ChargebackUITests/Pods-Nubank-ChargebackUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		90A76C43BC9160B8CB7BB8BE /* Pods-Nubank-ChargebackUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nubank-ChargebackUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Nubank-ChargebackUITests/Pods-Nubank-ChargebackUITests.release.xcconfig"; sourceTree = "<group>"; };
-		999A428738293819F58B16D0 /* Pods_Nubank_ChargebackTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nubank_ChargebackTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B9CFB399D6CD100AE30848A8 /* Pods-Nubank-ChargebackTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nubank-ChargebackTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Nubank-ChargebackTests/Pods-Nubank-ChargebackTests.release.xcconfig"; sourceTree = "<group>"; };
-		DA95445863351E501FC33247 /* Pods_Nubank_ChargebackUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nubank_ChargebackUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DD0B57495EE52BC9BAC2FC73 /* Pods-Nubank-Chargeback.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nubank-Chargeback.release.xcconfig"; path = "Pods/Target Support Files/Pods-Nubank-Chargeback/Pods-Nubank-Chargeback.release.xcconfig"; sourceTree = "<group>"; };
-		E96176D9B85DC1E2A922AABE /* Pods-Nubank-ChargebackTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nubank-ChargebackTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Nubank-ChargebackTests/Pods-Nubank-ChargebackTests.debug.xcconfig"; sourceTree = "<group>"; };
-		ED55F82A37AC8ABA0E8F1432 /* Pods-Nubank-Chargeback.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nubank-Chargeback.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Nubank-Chargeback/Pods-Nubank-Chargeback.debug.xcconfig"; sourceTree = "<group>"; };
-		FFEC2A332B7123A30AB88BFF /* Pods_Nubank_Chargeback.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nubank_Chargeback.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A86739B4D766E1F9C85EC6D8 /* Pods_Nubank_Chargeback.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nubank_Chargeback.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E3716C2BBA30E735BE7B08DC /* Pods-Nubank-ChargebackUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nubank-ChargebackUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Nubank-ChargebackUITests/Pods-Nubank-ChargebackUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		EFF4ABACFF5B8F70A82FCACA /* Pods-Nubank-Chargeback.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nubank-Chargeback.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Nubank-Chargeback/Pods-Nubank-Chargeback.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,7 +109,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CAC54CC1F1CF70BC45C1B27A /* Pods_Nubank_Chargeback.framework in Frameworks */,
+				D1A412C0F37681AD2BF14007 /* Pods_Nubank_Chargeback.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,7 +117,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D859A00E225F044F03FE6076 /* Pods_Nubank_ChargebackTests.framework in Frameworks */,
+				83CA76B0F8F6022E9FBE9266 /* Pods_Nubank_ChargebackTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,19 +125,32 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C858F30D58ED12E831B6303 /* Pods_Nubank_ChargebackUITests.framework in Frameworks */,
+				E60F6B02560B20E3946B9489 /* Pods_Nubank_ChargebackUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5D8C75959AA2E7F076038A26 /* Frameworks */ = {
+		1CCCEA9B321DA16B25E56D62 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				FFEC2A332B7123A30AB88BFF /* Pods_Nubank_Chargeback.framework */,
-				999A428738293819F58B16D0 /* Pods_Nubank_ChargebackTests.framework */,
-				DA95445863351E501FC33247 /* Pods_Nubank_ChargebackUITests.framework */,
+				EFF4ABACFF5B8F70A82FCACA /* Pods-Nubank-Chargeback.debug.xcconfig */,
+				37DB65F1EC50E5220A2CCAD2 /* Pods-Nubank-Chargeback.release.xcconfig */,
+				08F9EBCE224C044B15C34840 /* Pods-Nubank-ChargebackTests.debug.xcconfig */,
+				0862B580C6A96C22113C7D4A /* Pods-Nubank-ChargebackTests.release.xcconfig */,
+				E3716C2BBA30E735BE7B08DC /* Pods-Nubank-ChargebackUITests.debug.xcconfig */,
+				0F86C04FB01142A9131991D7 /* Pods-Nubank-ChargebackUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		49F05D6B650E7584028A9F86 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A86739B4D766E1F9C85EC6D8 /* Pods_Nubank_Chargeback.framework */,
+				510026C7850DCF62C436A64B /* Pods_Nubank_ChargebackTests.framework */,
+				062B49451896DCDBD4CAA0AD /* Pods_Nubank_ChargebackUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -168,8 +181,8 @@
 				61F78A4B1F6B77FB00F94CB0 /* Nubank-ChargebackTests */,
 				61F78A561F6B77FB00F94CB0 /* Nubank-ChargebackUITests */,
 				61F78A351F6B77FB00F94CB0 /* Products */,
-				E037E23277CE94626823A4A9 /* Pods */,
-				5D8C75959AA2E7F076038A26 /* Frameworks */,
+				1CCCEA9B321DA16B25E56D62 /* Pods */,
+				49F05D6B650E7584028A9F86 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -401,19 +414,6 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		E037E23277CE94626823A4A9 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				ED55F82A37AC8ABA0E8F1432 /* Pods-Nubank-Chargeback.debug.xcconfig */,
-				DD0B57495EE52BC9BAC2FC73 /* Pods-Nubank-Chargeback.release.xcconfig */,
-				E96176D9B85DC1E2A922AABE /* Pods-Nubank-ChargebackTests.debug.xcconfig */,
-				B9CFB399D6CD100AE30848A8 /* Pods-Nubank-ChargebackTests.release.xcconfig */,
-				8D7A1AB97142A124FD206CF6 /* Pods-Nubank-ChargebackUITests.debug.xcconfig */,
-				90A76C43BC9160B8CB7BB8BE /* Pods-Nubank-ChargebackUITests.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -421,12 +421,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 61F78A5C1F6B77FB00F94CB0 /* Build configuration list for PBXNativeTarget "Nubank-Chargeback" */;
 			buildPhases = (
-				1CDBD478AC31C4CA4A772567 /* [CP] Check Pods Manifest.lock */,
+				CA56C6CAAFE4476A6547F290 /* [CP] Check Pods Manifest.lock */,
 				61F78A301F6B77FB00F94CB0 /* Sources */,
 				61F78A311F6B77FB00F94CB0 /* Frameworks */,
 				61F78A321F6B77FB00F94CB0 /* Resources */,
-				4FCD06F473538262E423821B /* [CP] Embed Pods Frameworks */,
-				A081EF51F4A03E449724973E /* [CP] Copy Pods Resources */,
+				BE04672B48A398CB7CEFA7C8 /* [CP] Embed Pods Frameworks */,
+				89944D018E633AF4B71AEDF1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -441,12 +441,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 61F78A5F1F6B77FB00F94CB0 /* Build configuration list for PBXNativeTarget "Nubank-ChargebackTests" */;
 			buildPhases = (
-				5EB759D7A80C9C7F0EE58E3C /* [CP] Check Pods Manifest.lock */,
+				30D448C0D55E28ECA02AD02B /* [CP] Check Pods Manifest.lock */,
 				61F78A441F6B77FB00F94CB0 /* Sources */,
 				61F78A451F6B77FB00F94CB0 /* Frameworks */,
 				61F78A461F6B77FB00F94CB0 /* Resources */,
-				A80EC5557B29C1EF863D5B56 /* [CP] Embed Pods Frameworks */,
-				63118229BA06A26EC1B1418E /* [CP] Copy Pods Resources */,
+				2188F2C3B971528E50A1C873 /* [CP] Embed Pods Frameworks */,
+				C3E7A0811EFC1883273E5929 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -462,12 +462,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 61F78A621F6B77FB00F94CB0 /* Build configuration list for PBXNativeTarget "Nubank-ChargebackUITests" */;
 			buildPhases = (
-				52F62573FB9FD9D0A797CC5D /* [CP] Check Pods Manifest.lock */,
+				4E2FD3C357024749DF0FA35E /* [CP] Check Pods Manifest.lock */,
 				61F78A4F1F6B77FB00F94CB0 /* Sources */,
 				61F78A501F6B77FB00F94CB0 /* Frameworks */,
 				61F78A511F6B77FB00F94CB0 /* Resources */,
-				EDB9CA59B88FA9EC247C599B /* [CP] Embed Pods Frameworks */,
-				A0C41715A94A93B117DED6D0 /* [CP] Copy Pods Resources */,
+				A4A6F34FADED071C032CD747 /* [CP] Embed Pods Frameworks */,
+				6F3AEF77B9BFCFE943E0C3CF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -486,22 +486,24 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = MichaelDouglas;
 				TargetAttributes = {
 					61F78A331F6B77FB00F94CB0 = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = 4Q582659G6;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 					61F78A471F6B77FB00F94CB0 = {
 						CreatedOnToolsVersion = 8.3.3;
-						LastSwiftMigration = 0830;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 61F78A331F6B77FB00F94CB0;
 					};
 					61F78A521F6B77FB00F94CB0 = {
 						CreatedOnToolsVersion = 8.3.3;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 61F78A331F6B77FB00F94CB0;
 					};
@@ -557,112 +559,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1CDBD478AC31C4CA4A772567 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		4FCD06F473538262E423821B /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Nubank-Chargeback/Pods-Nubank-Chargeback-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		52F62573FB9FD9D0A797CC5D /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		5EB759D7A80C9C7F0EE58E3C /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		63118229BA06A26EC1B1418E /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Nubank-ChargebackTests/Pods-Nubank-ChargebackTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A081EF51F4A03E449724973E /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Nubank-Chargeback/Pods-Nubank-Chargeback-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A0C41715A94A93B117DED6D0 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Nubank-ChargebackUITests/Pods-Nubank-ChargebackUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A80EC5557B29C1EF863D5B56 /* [CP] Embed Pods Frameworks */ = {
+		2188F2C3B971528E50A1C873 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -677,7 +574,67 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Nubank-ChargebackTests/Pods-Nubank-ChargebackTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		EDB9CA59B88FA9EC247C599B /* [CP] Embed Pods Frameworks */ = {
+		30D448C0D55E28ECA02AD02B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		4E2FD3C357024749DF0FA35E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		6F3AEF77B9BFCFE943E0C3CF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Nubank-ChargebackUITests/Pods-Nubank-ChargebackUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		89944D018E633AF4B71AEDF1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Nubank-Chargeback/Pods-Nubank-Chargeback-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A4A6F34FADED071C032CD747 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -690,6 +647,51 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Nubank-ChargebackUITests/Pods-Nubank-ChargebackUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BE04672B48A398CB7CEFA7C8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Nubank-Chargeback/Pods-Nubank-Chargeback-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C3E7A0811EFC1883273E5929 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Nubank-ChargebackTests/Pods-Nubank-ChargebackTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CA56C6CAAFE4476A6547F290 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -765,7 +767,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -773,7 +777,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -802,6 +810,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -816,7 +825,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -824,7 +835,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -845,6 +860,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -852,7 +868,7 @@
 		};
 		61F78A5D1F6B77FB00F94CB0 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = ED55F82A37AC8ABA0E8F1432 /* Pods-Nubank-Chargeback.debug.xcconfig */;
+			baseConfigurationReference = EFF4ABACFF5B8F70A82FCACA /* Pods-Nubank-Chargeback.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -861,14 +877,15 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.michaeldouglas.Nubank-Chargeback";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		61F78A5E1F6B77FB00F94CB0 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DD0B57495EE52BC9BAC2FC73 /* Pods-Nubank-Chargeback.release.xcconfig */;
+			baseConfigurationReference = 37DB65F1EC50E5220A2CCAD2 /* Pods-Nubank-Chargeback.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -877,14 +894,15 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.michaeldouglas.Nubank-Chargeback";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 		61F78A601F6B77FB00F94CB0 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E96176D9B85DC1E2A922AABE /* Pods-Nubank-ChargebackTests.debug.xcconfig */;
+			baseConfigurationReference = 08F9EBCE224C044B15C34840 /* Pods-Nubank-ChargebackTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -895,14 +913,15 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Nubank-ChargebackTests/Nubank-ChargebackTests-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
+				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Nubank-Chargeback.app/Nubank-Chargeback";
 			};
 			name = Debug;
 		};
 		61F78A611F6B77FB00F94CB0 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B9CFB399D6CD100AE30848A8 /* Pods-Nubank-ChargebackTests.release.xcconfig */;
+			baseConfigurationReference = 0862B580C6A96C22113C7D4A /* Pods-Nubank-ChargebackTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -912,35 +931,38 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.michaeldouglas.Nubank-ChargebackTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Nubank-ChargebackTests/Nubank-ChargebackTests-Bridging-Header.h";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
+				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Nubank-Chargeback.app/Nubank-Chargeback";
 			};
 			name = Release;
 		};
 		61F78A631F6B77FB00F94CB0 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8D7A1AB97142A124FD206CF6 /* Pods-Nubank-ChargebackUITests.debug.xcconfig */;
+			baseConfigurationReference = E3716C2BBA30E735BE7B08DC /* Pods-Nubank-ChargebackUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = "Nubank-ChargebackUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.michaeldouglas.Nubank-ChargebackUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
+				SWIFT_VERSION = 4.0;
 				TEST_TARGET_NAME = "Nubank-Chargeback";
 			};
 			name = Debug;
 		};
 		61F78A641F6B77FB00F94CB0 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 90A76C43BC9160B8CB7BB8BE /* Pods-Nubank-ChargebackUITests.release.xcconfig */;
+			baseConfigurationReference = 0F86C04FB01142A9131991D7 /* Pods-Nubank-ChargebackUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = "Nubank-ChargebackUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.michaeldouglas.Nubank-ChargebackUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
+				SWIFT_VERSION = 4.0;
 				TEST_TARGET_NAME = "Nubank-Chargeback";
 			};
 			name = Release;

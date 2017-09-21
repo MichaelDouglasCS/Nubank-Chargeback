@@ -37,8 +37,10 @@ extension String{
 		}
 		
 		guard let stringData = text.data(using: .utf8) else { return nil }
-		let options: [String : Any] = [NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType,
-		                               NSCharacterEncodingDocumentAttribute: String.Encoding.utf8.rawValue]
+		var options: [NSAttributedString.DocumentReadingOptionKey : Any] = [:]
+		options = [NSAttributedString.DocumentReadingOptionKey(rawValue: NSAttributedString.DocumentAttributeKey.documentType.rawValue): NSAttributedString.DocumentType.html,
+		           NSAttributedString.DocumentReadingOptionKey(rawValue: NSAttributedString.DocumentAttributeKey.characterEncoding.rawValue): String.Encoding.utf8.rawValue]
+		
 		return try? NSAttributedString(data: stringData, options: options, documentAttributes: nil)
 	}
 	
@@ -59,8 +61,10 @@ extension String{
 		}
 		
 		guard let stringData = text.data(using: .utf8) else { return nil }
-		let options: [String : Any] = [NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType,
-		                               NSCharacterEncodingDocumentAttribute: String.Encoding.utf8.rawValue]
+		var options: [NSAttributedString.DocumentReadingOptionKey : Any] = [:]
+		options = [NSAttributedString.DocumentReadingOptionKey(rawValue: NSAttributedString.DocumentAttributeKey.documentType.rawValue): NSAttributedString.DocumentType.html,
+		           NSAttributedString.DocumentReadingOptionKey(rawValue: NSAttributedString.DocumentAttributeKey.characterEncoding.rawValue): String.Encoding.utf8.rawValue]
+		
 		return try? NSAttributedString(data: stringData, options: options, documentAttributes: nil)
 	}
 	

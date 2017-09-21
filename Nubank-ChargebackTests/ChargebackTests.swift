@@ -62,6 +62,7 @@ class ChargebackTests: XCTestCase {
 		let expectation = self.expectation(description: #function)
 		
 		ChargebackLO.sharedInstance.load() { (result) in
+			
 			switch result {
 			case .success:
 				break
@@ -203,6 +204,104 @@ class ChargebackTests: XCTestCase {
 			}
 			
 			stubManager.removeStubs()
+			expectation.fulfill()
+		}
+		
+		self.waitForExpectations(timeout: Test.timeout, handler: nil)
+	}
+	
+	func testUpdateReasonDetail_WithTrueResponse_ShouldUpdateResponse() {
+		let expectation = self.expectation(description: #function)
+		let stubManager = StubManager()
+		
+		stubManager.addStubs()
+		
+		Test.loadChargebackFromAnyServer {
+			let chargeback = ChargebackLO.sharedInstance.current
+
+			chargeback?.update(reason: .merchant, with: true)
+			chargeback?.update(reason: .possession, with: true)
+			
+			chargeback?.reason_details.forEach({ (reasonDetail) in
+				
+				if let reason = reasonDetail.reason {
+					
+					switch reason {
+					case .merchant:
+						XCTAssertTrue(reasonDetail.response, "The Response is False, Should be True")
+					case .possession:
+						XCTAssertTrue(reasonDetail.response, "The Response is False, Should be True")
+					}
+				} else {
+					XCTAssertTrue(false, "An Error Ocurred when get Reason")
+				}
+			})
+			
+			stubManager.removeStubs()
+			expectation.fulfill()
+		}
+		
+		self.waitForExpectations(timeout: Test.timeout, handler: nil)
+	}
+	
+	func testBlockCardEndpoint_WithDevelopmentEndpoint_ShouldReturnSuccess() {
+		let expectation = self.expectation(description: #function)
+		
+		ChargebackLO.sharedInstance.blockCard() { (result) in
+			
+			switch result {
+			case .success:
+				break
+			case .error(let error):
+				XCTAssert(false, "The Block Card endpoint is returning an error: \(error.rawValue)")
+			}
+			
+			expectation.fulfill()
+		}
+		
+		self.waitForExpectations(timeout: Test.timeout, handler: nil)
+	}
+	
+	func testUnblockCardEndpoint_WithDevelopmentEndpoint_ShouldReturnSuccess() {
+		let expectation = self.expectation(description: #function)
+		
+		ChargebackLO.sharedInstance.unblockCard() { (result) in
+			
+			switch result {
+			case .success:
+				break
+			case .error(let error):
+				XCTAssert(false, "The Unblock Card endpoint is returning an error: \(error.rawValue)")
+			}
+			
+			expectation.fulfill()
+		}
+		
+		self.waitForExpectations(timeout: Test.timeout, handler: nil)
+	}
+	
+	func testBlockCard_WithDevelopmentEndpoint_ShouldCardBeBlocked() {
+		let expectation = self.expectation(description: #function)
+		
+		ChargebackLO.sharedInstance.blockCard() { _ in
+			let isCardBlocked = ChargebackLO.sharedInstance.isCardBlocked
+			
+			XCTAssertTrue(isCardBlocked, "The Card is Unblocked, Should be Blocked")
+			
+			expectation.fulfill()
+		}
+		
+		self.waitForExpectations(timeout: Test.timeout, handler: nil)
+	}
+	
+	func testUnblockCard_WithDevelopmentEndpoint_ShouldCardBeUnblocked() {
+		let expectation = self.expectation(description: #function)
+		
+		ChargebackLO.sharedInstance.unblockCard() { _ in
+			let isCardBlocked = ChargebackLO.sharedInstance.isCardBlocked
+			
+			XCTAssertFalse(isCardBlocked, "The Card is Blocked, Should be Unblocked")
+			
 			expectation.fulfill()
 		}
 		

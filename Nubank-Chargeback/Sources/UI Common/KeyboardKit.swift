@@ -33,7 +33,7 @@ protocol KeyboardNotifications {
 
 extension UIViewController {
 	
-	func keyboardWillChange(notification: Notification) {
+	@objc func keyboardWillChange(notification: Notification) {
 		let name = notification.name
 		
 		if name == .UIKeyboardWillShow {
@@ -59,7 +59,7 @@ extension UIViewController {
 		self.view.addGestureRecognizer(tap)
 	}
 	
-	func dismissKeyboard() {
+	@objc func dismissKeyboard() {
 		self.view.endEditing(true)
 	}
 	

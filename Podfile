@@ -7,8 +7,7 @@ target 'Nubank-Chargeback' do
 
   # Pods for Nubank-Chargeback
   pod 'SwiftyJSON'
-  pod 'ObjectMapper', '~> 2.2'
-  pod 'CryptoSwift'
+  pod 'ObjectMapper'
   pod 'Alamofire'
   pod 'OHHTTPStubs'
   pod 'OHHTTPStubs/Swift'
