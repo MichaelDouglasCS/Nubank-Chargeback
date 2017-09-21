@@ -189,13 +189,13 @@ class ChargebackTests: XCTestCase {
 			
 			let params = JSON(chargeback?.toJSON() ?? [:])
 			
-			XCTAssertNotNil(params["comment"], "The Comment Param not exists, Should exist")
-			XCTAssertNotNil(params["reason_details"], "The Reason Details Param not exists, Should exist")
+			XCTAssertTrue(params["comment"].exists(), "The Comment Param not exists, Should exist")
+			XCTAssertTrue(params["reason_details"].exists(), "The Reason Details Param not exists, Should exist")
 			
 			params["reason_details"].forEach({ (_, json) in
 				
-				XCTAssertNotNil(json["id"], "The Reason ID Param not exists, Should exist")
-				XCTAssertNotNil(json["title"], "The Reason Title Param not exists, Should exist")
+				XCTAssertTrue(json["id"].exists(), "The Reason ID Param not exists, Should exist")
+				XCTAssertTrue(json["response"].exists(), "The Reason Response Param not exists, Should exist")
 			})
 			
 			stubManager.removeStubs()

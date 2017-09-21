@@ -49,7 +49,7 @@ public final class ChargebackLO {
 	
 	private func parse(json: JSON) {
 		
-		if let json = json.dictionaryObject {
+		if let json = json.dictionaryObject, !json.isEmpty {
 			self.current = ChargebackBO(JSON: json)
 		}
 	}
@@ -80,11 +80,10 @@ public final class ChargebackLO {
 	}
 	
 	public func submit(completionHandler: @escaping LogicResult) {
+		let params = self.current?.toJSON() ?? [:]
 		
-		if let params = self.current?.toJSON() {
-			ServerRequest.API.sendChargeback.execute(params: params) { (_, result) in
-				completionHandler(result)
-			}
+		ServerRequest.API.sendChargeback.execute(params: params) { (_, result) in
+			completionHandler(result)
 		}
 	}
 

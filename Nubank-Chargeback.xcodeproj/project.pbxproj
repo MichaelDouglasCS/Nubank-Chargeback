@@ -15,6 +15,8 @@
 		61774E6B1F743340003039E7 /* CardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61774E6A1F743340003039E7 /* CardTests.swift */; };
 		61837BD21F73273200E0F37B /* ChargebackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61837BD11F73273200E0F37B /* ChargebackTests.swift */; };
 		618F9E841F7037C700AEEDBE /* KeyboardKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618F9E831F7037C700AEEDBE /* KeyboardKit.swift */; };
+		61AD24291F745FFD00E14E47 /* NoticeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AD24271F745FFD00E14E47 /* NoticeUITests.swift */; };
+		61AD242A1F745FFD00E14E47 /* TestingCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AD24281F745FFD00E14E47 /* TestingCommon.swift */; };
 		61BF9F9F1F720DD1002CCE80 /* ServerRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61BF9F9E1F720DD1002CCE80 /* ServerRequestTests.swift */; };
 		61BF9FA21F7214D2002CCE80 /* TestingCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61BF9FA11F7214D2002CCE80 /* TestingCommon.swift */; };
 		61BF9FA41F72153F002CCE80 /* NoticeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61BF9FA31F72153F002CCE80 /* NoticeTests.swift */; };
@@ -24,7 +26,6 @@
 		61F5EB9F1F6C61FE000F1CE1 /* NoticeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F5EB9E1F6C61FE000F1CE1 /* NoticeVC.swift */; };
 		61F78A381F6B77FB00F94CB0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F78A371F6B77FB00F94CB0 /* AppDelegate.swift */; };
 		61F78A3F1F6B77FB00F94CB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61F78A3E1F6B77FB00F94CB0 /* Assets.xcassets */; };
-		61F78A581F6B77FB00F94CB0 /* Nubank_ChargebackUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F78A571F6B77FB00F94CB0 /* Nubank_ChargebackUITests.swift */; };
 		61F78A7C1F6B84C500F94CB0 /* Chargeback.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61F78A7A1F6B84C500F94CB0 /* Chargeback.storyboard */; };
 		61F78A7D1F6B84C500F94CB0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61F78A7B1F6B84C500F94CB0 /* LaunchScreen.storyboard */; };
 		61F8F8B71F6C9C4D00B6E1F4 /* ServerRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F8F8B61F6C9C4D00B6E1F4 /* ServerRequest.swift */; };
@@ -74,6 +75,8 @@
 		61774E6A1F743340003039E7 /* CardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTests.swift; sourceTree = "<group>"; };
 		61837BD11F73273200E0F37B /* ChargebackTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChargebackTests.swift; sourceTree = "<group>"; };
 		618F9E831F7037C700AEEDBE /* KeyboardKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardKit.swift; sourceTree = "<group>"; };
+		61AD24271F745FFD00E14E47 /* NoticeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeUITests.swift; sourceTree = "<group>"; };
+		61AD24281F745FFD00E14E47 /* TestingCommon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingCommon.swift; sourceTree = "<group>"; };
 		61BF9F9E1F720DD1002CCE80 /* ServerRequestTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerRequestTests.swift; sourceTree = "<group>"; };
 		61BF9FA01F720FED002CCE80 /* Nubank-ChargebackTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Nubank-ChargebackTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		61BF9FA11F7214D2002CCE80 /* TestingCommon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestingCommon.swift; sourceTree = "<group>"; };
@@ -89,7 +92,6 @@
 		61F78A481F6B77FB00F94CB0 /* Nubank-ChargebackTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Nubank-ChargebackTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		61F78A4E1F6B77FB00F94CB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		61F78A531F6B77FB00F94CB0 /* Nubank-ChargebackUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Nubank-ChargebackUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		61F78A571F6B77FB00F94CB0 /* Nubank_ChargebackUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nubank_ChargebackUITests.swift; sourceTree = "<group>"; };
 		61F78A591F6B77FB00F94CB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		61F78A7A1F6B84C500F94CB0 /* Chargeback.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Chargeback.storyboard; sourceTree = "<group>"; };
 		61F78A7B1F6B84C500F94CB0 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -227,8 +229,9 @@
 		61F78A561F6B77FB00F94CB0 /* Nubank-ChargebackUITests */ = {
 			isa = PBXGroup;
 			children = (
-				61F78A571F6B77FB00F94CB0 /* Nubank_ChargebackUITests.swift */,
 				61F78A591F6B77FB00F94CB0 /* Info.plist */,
+				61AD24271F745FFD00E14E47 /* NoticeUITests.swift */,
+				61AD24281F745FFD00E14E47 /* TestingCommon.swift */,
 			);
 			path = "Nubank-ChargebackUITests";
 			sourceTree = "<group>";
@@ -745,7 +748,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				61F78A581F6B77FB00F94CB0 /* Nubank_ChargebackUITests.swift in Sources */,
+				61AD242A1F745FFD00E14E47 /* TestingCommon.swift in Sources */,
+				61AD24291F745FFD00E14E47 /* NoticeUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

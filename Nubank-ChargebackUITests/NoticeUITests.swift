@@ -1,13 +1,12 @@
 //
-//  NoticeLO.swift
-//  Nubank-Chargeback
+//  NoticeUITests.swift
+//  Nubank-ChargebackUITests
 //
-//  Created by Michael Douglas on 15/09/17.
+//  Created by Michael Douglas on 21/09/17.
 //  Copyright © 2017 MichaelDouglas. All rights reserved.
 //
 
-import Foundation
-import SwiftyJSON
+import XCTest
 
 //**********************************************************************************************************
 //
@@ -27,57 +26,47 @@ import SwiftyJSON
 //
 //**********************************************************************************************************
 
-public final class NoticeLO {
-
+class NoticeUITests: XCTestCase {
+	
 //*************************************************
 // MARK: - Properties
 //*************************************************
 
-	static public let sharedInstance: NoticeLO = NoticeLO()
-	
-	public var current: NoticeBO?
-	
 //*************************************************
 // MARK: - Constructors
 //*************************************************
 
-	private init() { }
-	
 //*************************************************
 // MARK: - Protected Methods
 //*************************************************
 
-	private func parse(json: JSON) {
-		
-		if let json = json.dictionaryObject, !json.isEmpty {
-			self.current = NoticeBO(JSON: json)
-		}
-	}
-	
 //*************************************************
 // MARK: - Exposed Methods
 //*************************************************
 	
-	public func load(completionHandler: @escaping LogicResult) {
-		ServerRequest.API.notice.execute() { (json, result) in
-			DispatchQueue.global().async {
-				self.parse(json: json)
-				
-				DispatchQueue.main.async {
-					completionHandler(result)
-				}
-			}
+	func testShowContainerView_WithDevelopmentEndpoint_ShouldBringTheView() {
+		let app = XCUIApplication()
+		
+		let exists = NSPredicate(format: "hittable == TRUE")
+		let noticeViewContainer = app.otherElements["NoticeViewContainer"]
+		
+		self.expectation(for: exists, evaluatedWith: noticeViewContainer) { () -> Bool in
+			return true
+		}
+		
+		self.waitForExpectations(timeout: Test.timeout) { (error) in
+			XCTAssertNil(error, "The Notice View Container is Not Showing")
 		}
 	}
 
 //*************************************************
 // MARK: - Overridden Public Methods
 //*************************************************
-
+	
+    override func setUp() {
+        super.setUp()
+		
+        self.continueAfterFailure = false
+        XCUIApplication().launch()
+    }
 }
-
-//**********************************************************************************************************
-//
-// MARK: - Extension -
-//
-//**********************************************************************************************************
