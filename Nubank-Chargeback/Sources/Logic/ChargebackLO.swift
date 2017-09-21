@@ -36,7 +36,6 @@ public final class ChargebackLO {
 	static public let sharedInstance: ChargebackLO = ChargebackLO()
 	
 	public var current: ChargebackBO?
-	public var isCardBlocked: Bool = false
 	
 //*************************************************
 // MARK: - Constructors
@@ -66,7 +65,7 @@ public final class ChargebackLO {
 				
 				if self.current?.autoblock ?? false {
 					
-					self.blockCard() { (result) in
+					CardLO.sharedInstance.blockCard() { (result) in
 						DispatchQueue.main.async {
 							completionHandler(result)
 						}
@@ -86,32 +85,6 @@ public final class ChargebackLO {
 			ServerRequest.API.sendChargeback.execute(params: params) { (_, result) in
 				completionHandler(result)
 			}
-		}
-	}
-	
-	public func blockCard(completionHandler: @escaping LogicResult) {
-		ServerRequest.API.blockCard.execute() { (_, result) in
-
-			switch result {
-			case .success:
-				self.isCardBlocked = true
-			case .error:
-				self.isCardBlocked = false
-			}
-			completionHandler(result)
-		}
-	}
-	
-	public func unblockCard(completionHandler: @escaping LogicResult) {
-		ServerRequest.API.unblockCard.execute() { (_, result) in
-			
-			switch result {
-			case .success:
-				self.isCardBlocked = false
-			case .error:
-				self.isCardBlocked = true
-			}
-			completionHandler(result)
 		}
 	}
 

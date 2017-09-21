@@ -104,6 +104,17 @@ class StubManager {
 		}
 	}
 	
+	func simulateNoInternetConnection() {
+		
+		stub(condition: isHost("nu-mobile-hiring.herokuapp.com")) { request in
+			
+			let notConnectedError = NSError(domain:NSURLErrorDomain,
+			                                code:Int(CFNetworkErrors.cfurlErrorNotConnectedToInternet.rawValue),
+			                                userInfo:nil)
+			return OHHTTPStubsResponse(error:notConnectedError)
+		}
+	}
+	
 	func removeStubs() {
 		OHHTTPStubs.removeAllStubs()
 	}

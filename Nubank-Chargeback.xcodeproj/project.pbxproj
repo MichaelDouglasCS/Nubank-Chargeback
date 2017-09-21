@@ -11,6 +11,8 @@
 		611ED57C1F6F344200B1FD4C /* UISwitchButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611ED57B1F6F344200B1FD4C /* UISwitchButton.swift */; };
 		615EBBDC1F734318005A2728 /* chargeback.json in Resources */ = {isa = PBXBuildFile; fileRef = 615EBBDA1F734318005A2728 /* chargeback.json */; };
 		615EBBDD1F734318005A2728 /* notice.json in Resources */ = {isa = PBXBuildFile; fileRef = 615EBBDB1F734318005A2728 /* notice.json */; };
+		61774E691F743120003039E7 /* CardLO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61774E681F743120003039E7 /* CardLO.swift */; };
+		61774E6B1F743340003039E7 /* CardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61774E6A1F743340003039E7 /* CardTests.swift */; };
 		61837BD21F73273200E0F37B /* ChargebackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61837BD11F73273200E0F37B /* ChargebackTests.swift */; };
 		618F9E841F7037C700AEEDBE /* KeyboardKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618F9E831F7037C700AEEDBE /* KeyboardKit.swift */; };
 		61BF9F9F1F720DD1002CCE80 /* ServerRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61BF9F9E1F720DD1002CCE80 /* ServerRequestTests.swift */; };
@@ -68,6 +70,8 @@
 		611ED57B1F6F344200B1FD4C /* UISwitchButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UISwitchButton.swift; sourceTree = "<group>"; };
 		615EBBDA1F734318005A2728 /* chargeback.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = chargeback.json; sourceTree = "<group>"; };
 		615EBBDB1F734318005A2728 /* notice.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = notice.json; sourceTree = "<group>"; };
+		61774E681F743120003039E7 /* CardLO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardLO.swift; sourceTree = "<group>"; };
+		61774E6A1F743340003039E7 /* CardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTests.swift; sourceTree = "<group>"; };
 		61837BD11F73273200E0F37B /* ChargebackTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChargebackTests.swift; sourceTree = "<group>"; };
 		618F9E831F7037C700AEEDBE /* KeyboardKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardKit.swift; sourceTree = "<group>"; };
 		61BF9F9E1F720DD1002CCE80 /* ServerRequestTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerRequestTests.swift; sourceTree = "<group>"; };
@@ -208,12 +212,13 @@
 		61F78A4B1F6B77FB00F94CB0 /* Nubank-ChargebackTests */ = {
 			isa = PBXGroup;
 			children = (
-				615EBBDE1F73431D005A2728 /* Stubs */,
+				61774E6A1F743340003039E7 /* CardTests.swift */,
 				61837BD11F73273200E0F37B /* ChargebackTests.swift */,
 				61F78A4E1F6B77FB00F94CB0 /* Info.plist */,
 				61BF9FA31F72153F002CCE80 /* NoticeTests.swift */,
 				61BF9FA01F720FED002CCE80 /* Nubank-ChargebackTests-Bridging-Header.h */,
 				61BF9F9E1F720DD1002CCE80 /* ServerRequestTests.swift */,
+				615EBBDE1F73431D005A2728 /* Stubs */,
 				61BF9FA11F7214D2002CCE80 /* TestingCommon.swift */,
 			);
 			path = "Nubank-ChargebackTests";
@@ -304,6 +309,7 @@
 		61F78A6D1F6B7D2C00F94CB0 /* Logic */ = {
 			isa = PBXGroup;
 			children = (
+				61774E681F743120003039E7 /* CardLO.swift */,
 				61F8F8BA1F6CBAC800B6E1F4 /* ChargebackLO.swift */,
 				61F8F8B81F6CB8A200B6E1F4 /* NoticeLO.swift */,
 				61F78A731F6B7E9C00F94CB0 /* Services */,
@@ -707,6 +713,7 @@
 				61F5EB961F6C4EE1000F1CE1 /* UIBox.swift in Sources */,
 				61C8F84C1F708CBB006E8CB8 /* FinishChargebackVC.swift in Sources */,
 				61F8F8C51F6CEBE800B6E1F4 /* ReasonDetailBO.swift in Sources */,
+				61774E691F743120003039E7 /* CardLO.swift in Sources */,
 				61F8F8B71F6C9C4D00B6E1F4 /* ServerRequest.swift in Sources */,
 				618F9E841F7037C700AEEDBE /* KeyboardKit.swift in Sources */,
 				61F8F8C71F6CF21200B6E1F4 /* StyleKit.swift in Sources */,
@@ -728,6 +735,7 @@
 			files = (
 				61BF9F9F1F720DD1002CCE80 /* ServerRequestTests.swift in Sources */,
 				61BF9FA41F72153F002CCE80 /* NoticeTests.swift in Sources */,
+				61774E6B1F743340003039E7 /* CardTests.swift in Sources */,
 				61837BD21F73273200E0F37B /* ChargebackTests.swift in Sources */,
 				61BF9FA21F7214D2002CCE80 /* TestingCommon.swift in Sources */,
 			);
