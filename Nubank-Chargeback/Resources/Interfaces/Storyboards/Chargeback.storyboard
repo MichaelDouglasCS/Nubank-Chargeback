@@ -30,7 +30,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PAw-Av-Day" userLabel="Container" customClass="UIBox" customModule="Nubank_Chargeback" customModuleProvider="target">
-                                <rect key="frame" x="15" y="35" width="345" height="617"/>
+                                <rect key="frame" x="15" y="55" width="345" height="597"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tgj-1v-HmH">
                                         <rect key="frame" x="147.5" y="35" width="51.5" height="36"/>
@@ -39,13 +39,13 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Content" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mlw-6d-y5f">
-                                        <rect key="frame" x="14" y="81" width="317" height="306"/>
+                                        <rect key="frame" x="14" y="81" width="317" height="286"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Mbl-YS-zCJ">
-                                        <rect key="frame" x="0.0" y="417" width="345" height="200"/>
+                                        <rect key="frame" x="0.0" y="397" width="345" height="200"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6xw-Gj-BQ2" customClass="IBDesigableButton" customModule="Nubank_Chargeback" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="345" height="100"/>

@@ -55,7 +55,7 @@ class NoticeUITests: XCTestCase {
 		}
 		
 		self.waitForExpectations(timeout: Test.timeout) { (error) in
-			XCTAssertNil(error, "The Notice View Container is Not Showing")
+			XCTAssertNil(error, "The Notice View Container is Not Showing, Error: \(error?.localizedDescription ?? "")")
 		}
 	}
 
@@ -65,8 +65,11 @@ class NoticeUITests: XCTestCase {
 	
     override func setUp() {
         super.setUp()
+		self.continueAfterFailure = false
 		
-        self.continueAfterFailure = false
-        XCUIApplication().launch()
+		let app = XCUIApplication()
+		
+		app.launchArguments.append("ADD_MOCK")
+        app.launch()
     }
 }

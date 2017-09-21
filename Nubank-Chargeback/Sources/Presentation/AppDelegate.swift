@@ -48,7 +48,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //*************************************************
 	
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-		// Override point for customization after application launch.
+		let arguments = ProcessInfo.processInfo.arguments
+		let addMock = arguments.contains("ADD_MOCK")
+		let noConnection = arguments.contains("NO_CONNECTION")
+		
+		if (addMock) {
+			print("MOCK")
+		} else if (noConnection) {
+			
+		}
+		
 		return true
 	}
 	
