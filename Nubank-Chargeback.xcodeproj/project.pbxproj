@@ -15,8 +15,6 @@
 		61774E6B1F743340003039E7 /* CardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61774E6A1F743340003039E7 /* CardTests.swift */; };
 		61837BD21F73273200E0F37B /* ChargebackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61837BD11F73273200E0F37B /* ChargebackTests.swift */; };
 		618F9E841F7037C700AEEDBE /* KeyboardKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618F9E831F7037C700AEEDBE /* KeyboardKit.swift */; };
-		61AD24291F745FFD00E14E47 /* NoticeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AD24271F745FFD00E14E47 /* NoticeUITests.swift */; };
-		61AD242A1F745FFD00E14E47 /* TestingCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AD24281F745FFD00E14E47 /* TestingCommon.swift */; };
 		61BF9F9F1F720DD1002CCE80 /* ServerRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61BF9F9E1F720DD1002CCE80 /* ServerRequestTests.swift */; };
 		61BF9FA21F7214D2002CCE80 /* TestingCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61BF9FA11F7214D2002CCE80 /* TestingCommon.swift */; };
 		61BF9FA41F72153F002CCE80 /* NoticeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61BF9FA31F72153F002CCE80 /* NoticeTests.swift */; };
@@ -75,8 +73,6 @@
 		61774E6A1F743340003039E7 /* CardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTests.swift; sourceTree = "<group>"; };
 		61837BD11F73273200E0F37B /* ChargebackTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChargebackTests.swift; sourceTree = "<group>"; };
 		618F9E831F7037C700AEEDBE /* KeyboardKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardKit.swift; sourceTree = "<group>"; };
-		61AD24271F745FFD00E14E47 /* NoticeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeUITests.swift; sourceTree = "<group>"; };
-		61AD24281F745FFD00E14E47 /* TestingCommon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingCommon.swift; sourceTree = "<group>"; };
 		61BF9F9E1F720DD1002CCE80 /* ServerRequestTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerRequestTests.swift; sourceTree = "<group>"; };
 		61BF9FA01F720FED002CCE80 /* Nubank-ChargebackTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Nubank-ChargebackTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		61BF9FA11F7214D2002CCE80 /* TestingCommon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestingCommon.swift; sourceTree = "<group>"; };
@@ -230,8 +226,6 @@
 			isa = PBXGroup;
 			children = (
 				61F78A591F6B77FB00F94CB0 /* Info.plist */,
-				61AD24271F745FFD00E14E47 /* NoticeUITests.swift */,
-				61AD24281F745FFD00E14E47 /* TestingCommon.swift */,
 			);
 			path = "Nubank-ChargebackUITests";
 			sourceTree = "<group>";
@@ -748,8 +742,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				61AD242A1F745FFD00E14E47 /* TestingCommon.swift in Sources */,
-				61AD24291F745FFD00E14E47 /* NoticeUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

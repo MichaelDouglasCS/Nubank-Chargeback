@@ -78,7 +78,7 @@ class StubManager {
 		stub(condition: isHost("nu-mobile-hiring.herokuapp.com") && isPath("/notice")) { request in
 			// Stub it with our "notice.json" stub file
 			return OHHTTPStubsResponse(
-				fileAtPath: OHPathForFile("notice.json", type(of: self))!,
+				fileAtPath: OHPathForFile("notice.json", type(of: self)) ?? "",
 				statusCode: 200,
 				headers: ["Content-Type":"application/json"]
 			)
@@ -87,7 +87,7 @@ class StubManager {
 		stub(condition: isHost("nu-mobile-hiring.herokuapp.com") && isPath("/chargeback")) { request in
 			// Stub it with our "chargeback.json" stub file
 			return OHHTTPStubsResponse(
-				fileAtPath: OHPathForFile("chargeback.json", type(of: self))!,
+				fileAtPath: OHPathForFile("chargeback.json", type(of: self)) ?? "",
 				statusCode: 200,
 				headers: ["Content-Type":"application/json"]
 			)
