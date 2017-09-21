@@ -36,7 +36,7 @@ public final class ChargebackLO {
 	static public let sharedInstance: ChargebackLO = ChargebackLO()
 	
 	public var current: ChargebackBO?
-	public var isCardBlocked: Bool?
+	public var isCardBlocked: Bool = false
 	
 //*************************************************
 // MARK: - Constructors

@@ -45,13 +45,19 @@ class NoticeTests: XCTestCase {
 // MARK: - Exposed Methods
 //*************************************************
 	
-	func testNotice_WithNoticeBOModel_ShouldCreateObject() {
+	func testNoticeModel_WithNoticeBO_ShouldCreateObject() {
 		let notice = NoticeBO()
 		
 		XCTAssertNotNil(notice, "The Notice Model is nil, should be not nil")
 	}
 	
-	func testNotice_WithDevelopmentEndpoint_ShouldReturnSuccess() {
+	func testActionModel_WithActionBO_ShouldCreateObject() {
+		let action = ActionBO()
+		
+		XCTAssertNotNil(action, "The Action Model is nil, should be not nil")
+	}
+	
+	func testNoticeEndpoint_WithDevelopmentEndpoint_ShouldReturnSuccess() {
 		let expectation = self.expectation(description: #function)
 		
 		NoticeLO.sharedInstance.load() { (result) in
@@ -68,10 +74,10 @@ class NoticeTests: XCTestCase {
 		self.waitForExpectations(timeout: Test.timeout, handler: nil)
 	}
 	
-	func testNotice_WithDevelopmentEndpoint_ShouldReturnNotice() {
+	func testNoticeResponse_WithDevelopmentEndpoint_ShouldReturnNotice() {
 		let expectation = self.expectation(description: #function)
 		
-		Test.loadNoticeFromServer {
+		Test.loadNoticeFromAnyServer {
 			let notice = NoticeLO.sharedInstance.current
 			
 			XCTAssertNotNil(notice, "The Notice is nil, the server should return a valid notice")
@@ -82,10 +88,31 @@ class NoticeTests: XCTestCase {
 		self.waitForExpectations(timeout: Test.timeout, handler: nil)
 	}
 	
-	func testNotice_WithDevelopmentEndpoint_ShouldReturnTitleAndDescription() {
+	func testNoticeResponse_WithStub_ShouldReturnNotice() {
 		let expectation = self.expectation(description: #function)
+		let stubManager = StubManager()
 		
-		Test.loadNoticeFromServer {
+		stubManager.addStubs()
+		
+		Test.loadNoticeFromAnyServer {
+			let notice = NoticeLO.sharedInstance.current
+			
+			XCTAssertNotNil(notice, "The Notice is nil, should return a valid notice")
+			
+			stubManager.removeStubs()
+			expectation.fulfill()
+		}
+		
+		self.waitForExpectations(timeout: Test.timeout, handler: nil)
+	}
+	
+	func testNoticeTitleAndDescription_WithStub_ShouldReturnFields() {
+		let expectation = self.expectation(description: #function)
+		let stubManager = StubManager()
+		
+		stubManager.addStubs()
+		
+		Test.loadNoticeFromAnyServer {
 			let notice = NoticeLO.sharedInstance.current
 			let title = notice?.title ?? ""
 			let description = notice?.description ?? ""
@@ -93,16 +120,20 @@ class NoticeTests: XCTestCase {
 			XCTAssertFalse(title.isEmpty, "The Title is Empty, should has a content")
 			XCTAssertFalse(description.isEmpty, "The Description is Empty, should has a content")
 			
+			stubManager.removeStubs()
 			expectation.fulfill()
 		}
 		
 		self.waitForExpectations(timeout: Test.timeout, handler: nil)
 	}
 	
-	func testNotice_WithDevelopmentEndpoint_ShouldReturnActions() {
+	func testNoticeActions_WithStub_ShouldReturnActions() {
 		let expectation = self.expectation(description: #function)
+		let stubManager = StubManager()
 		
-		Test.loadNoticeFromServer {
+		stubManager.addStubs()
+		
+		Test.loadNoticeFromAnyServer {
 			let notice = NoticeLO.sharedInstance.current
 			if let primary = notice?.primary_action,
 				let secondary = notice?.secondary_action {
@@ -115,6 +146,7 @@ class NoticeTests: XCTestCase {
 				XCTAssert(false, "The Server not returned all actions, should return both")
 			}
 			
+			stubManager.removeStubs()
 			expectation.fulfill()
 		}
 		

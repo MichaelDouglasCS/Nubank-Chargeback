@@ -7,6 +7,7 @@
 //
 
 import XCTest
+import SwiftyJSON
 @testable import Nubank_Chargeback
 
 //**********************************************************************************************************
@@ -45,13 +46,19 @@ class ChargebackTests: XCTestCase {
 // MARK: - Exposed Methods
 //*************************************************
 	
-	func testChargeback_WithChargebackBOModel_ShouldCreateObject() {
+	func testChargebackModel_WithChargebackBO_ShouldCreateObject() {
 		let chargeback = ChargebackBO()
 		
 		XCTAssertNotNil(chargeback, "The Chargeback Model is nil, should be not nil")
 	}
 	
-	func testChargeback_WithDevelopmentEndpoint_ShouldReturnSuccess() {
+	func testReasonDetailModel_WithReasonDetailBO_ShouldCreateObject() {
+		let reasonDetail = ReasonDetailBO()
+		
+		XCTAssertNotNil(reasonDetail, "The ReasonDetail Model is nil, should be not nil")
+	}
+	
+	func testChargebackEndpoint_WithDevelopmentEndpoint_ShouldReturnSuccess() {
 		let expectation = self.expectation(description: #function)
 		
 		ChargebackLO.sharedInstance.load() { (result) in
@@ -68,10 +75,10 @@ class ChargebackTests: XCTestCase {
 		self.waitForExpectations(timeout: Test.timeout, handler: nil)
 	}
 	
-	func testChargeback_WithDevelopmentEndpoint_ShouldReturnChargeback() {
+	func testChargebackResponse_WithDevelopmentEndpoint_ShouldReturnChargeback() {
 		let expectation = self.expectation(description: #function)
 		
-		Test.loadChargebackFromServer {
+		Test.loadChargebackFromAnyServer {
 			let chargeback = ChargebackLO.sharedInstance.current
 			
 			XCTAssertNotNil(chargeback, "The Chargeback is nil, the server should return a valid Chargeback")
@@ -81,7 +88,127 @@ class ChargebackTests: XCTestCase {
 		
 		self.waitForExpectations(timeout: Test.timeout, handler: nil)
 	}
+	
+	func testChargebackResponse_WithStub_ShouldReturnChargeback() {
+		let expectation = self.expectation(description: #function)
+		let stubManager = StubManager()
+		
+		stubManager.addStubs()
+		
+		Test.loadChargebackFromAnyServer {
+			let chargeback = ChargebackLO.sharedInstance.current
+			
+			XCTAssertNotNil(chargeback, "The Chargeback is nil, the server should return a valid Chargeback")
+			
+			stubManager.removeStubs()
+			expectation.fulfill()
+		}
+		
+		self.waitForExpectations(timeout: Test.timeout, handler: nil)
+	}
+	
+	func testChargebackAutoblockTrue_WithStub_ShouldCardBeBlocked() {
+		let expectation = self.expectation(description: #function)
+		let stubManager = StubManager()
+		
+		stubManager.addStubs()
+		
+		Test.loadChargebackFromAnyServer {
+			let isCardBlocked = ChargebackLO.sharedInstance.isCardBlocked
+			
+			XCTAssertTrue(isCardBlocked, "The Card Status is False, Should be True")
+			
+			stubManager.removeStubs()
+			expectation.fulfill()
+		}
+		
+		self.waitForExpectations(timeout: Test.timeout, handler: nil)
+	}
+	
+	func testChargebackFields_WithStub_ShouldReturnAll() {
+		let expectation = self.expectation(description: #function)
+		let stubManager = StubManager()
+		
+		stubManager.addStubs()
+		
+		Test.loadChargebackFromAnyServer {
+			let chargeback = ChargebackLO.sharedInstance.current
+			
+			XCTAssertFalse(chargeback?.id?.isEmpty ?? true, "ID is Empty, Should has content")
+			XCTAssertFalse(chargeback?.title?.isEmpty ?? true, "Title is Empty, Should has content")
+			XCTAssertNotNil(chargeback?.autoblock, "Autoblock is Nil, Should has content")
+			XCTAssertFalse(chargeback?.comment_hint?.isEmpty ?? true, "Comment Hint is Empty, Should has content")
+			
+			let reasons = chargeback?.reason_details
+			
+			reasons?.forEach({ (reason) in
+				
+				XCTAssertFalse(reason.id?.isEmpty ?? true, "Reason id is Empty, Should has content")
+				XCTAssertFalse(reason.title?.isEmpty ?? true, "Reason Title is Empty, Should has content")
+			})
+			
+			stubManager.removeStubs()
+			expectation.fulfill()
+		}
+		
+		self.waitForExpectations(timeout: Test.timeout, handler: nil)
+	}
 
+	func testToJSONChargeback_WithStub_ShouldConvertToJSON() {
+		let expectation = self.expectation(description: #function)
+		let stubManager = StubManager()
+		
+		stubManager.addStubs()
+		
+		Test.loadChargebackFromAnyServer {
+			let chargeback = ChargebackLO.sharedInstance.current
+			chargeback?.comment = "Some Text"
+			
+			let params = JSON(chargeback?.toJSON() ?? [:])
+			
+			XCTAssertNotNil(params["comment"], "The Comment Param not exists, Should exist")
+			XCTAssertNotNil(params["reason_details"], "The Reason Details Param not exists, Should exist")
+			
+			params["reason_details"].forEach({ (_, json) in
+				
+				XCTAssertNotNil(json["id"], "The Reason ID Param not exists, Should exist")
+				XCTAssertNotNil(json["title"], "The Reason Title Param not exists, Should exist")
+			})
+			
+			stubManager.removeStubs()
+			expectation.fulfill()
+		}
+		
+		self.waitForExpectations(timeout: Test.timeout, handler: nil)
+	}
+	
+	func testSubmitChargeback_WithStub_ShouldReturnSuccess() {
+		let expectation = self.expectation(description: #function)
+		let stubManager = StubManager()
+		
+		stubManager.addStubs()
+		
+		Test.loadChargebackFromAnyServer {
+			let chargeback = ChargebackLO.sharedInstance.current
+			chargeback?.comment = "Some Text"
+			
+			ChargebackLO.sharedInstance.submit() { (result) in
+				
+				switch result {
+				case .success:
+					break
+				case .error(let error):
+					XCTAssertTrue(false, "The Submit was failed, an error occurs: \(error.rawValue)")
+				}
+			}
+			
+			stubManager.removeStubs()
+			expectation.fulfill()
+		}
+		
+		self.waitForExpectations(timeout: Test.timeout, handler: nil)
+	}
+	
 //*************************************************
 // MARK: - Overridden Public Methods
 //*************************************************

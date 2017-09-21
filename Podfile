@@ -10,6 +10,9 @@ target 'Nubank-Chargeback' do
   pod 'ObjectMapper', '~> 2.2'
   pod 'CryptoSwift'
   pod 'Alamofire'
+  pod 'OHHTTPStubs'
+  pod 'OHHTTPStubs/Swift'
+  pod 'OHHTTPStubs/NSURLSession'
 
   target 'Nubank-ChargebackTests' do
     inherit! :search_paths

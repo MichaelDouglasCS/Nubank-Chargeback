@@ -74,7 +74,7 @@ class ChargebackVC: UIViewController {
 	}
 	
 	private func updatePadlockLayout() {
-		let isCardBlocked = ChargebackLO.sharedInstance.isCardBlocked ?? false
+		let isCardBlocked = ChargebackLO.sharedInstance.isCardBlocked
 		
 		if isCardBlocked {
 			self.cardStatusView.image = UIImage(named: "icon_chargeback_lock")
@@ -92,7 +92,7 @@ class ChargebackVC: UIViewController {
 	}
 	
 	@objc private func padlockDidTap() {
-		let isCardBlocked = ChargebackLO.sharedInstance.isCardBlocked ?? false
+		let isCardBlocked = ChargebackLO.sharedInstance.isCardBlocked
 		
 		self.loadingPadlock(inProgress: true)
 		

@@ -7,6 +7,7 @@
 //
 
 import XCTest
+import OHHTTPStubs
 @testable import Nubank_Chargeback
 
 //**********************************************************************************************************
@@ -41,7 +42,7 @@ struct Test {
 // MARK: - Exposed Methods
 //**************************************************
 	
-	static func loadNoticeFromServer(completion: @escaping (() -> Void)) {
+	static func loadNoticeFromAnyServer(completion: @escaping (() -> Void)) {
 		if self.isLoadedNotice {
 			completion()
 		} else {
@@ -52,7 +53,7 @@ struct Test {
 		}
 	}
 	
-	static func loadChargebackFromServer(completion: @escaping (() -> Void)) {
+	static func loadChargebackFromAnyServer(completion: @escaping (() -> Void)) {
 		if self.isLoadedChargeback {
 			completion()
 		} else {
@@ -62,4 +63,53 @@ struct Test {
 			}
 		}
 	}
+}
+
+class StubManager {
+	
+//*************************************************
+// MARK: - Properties
+//*************************************************
+
+//*************************************************
+// MARK: - Constructors
+//*************************************************
+
+//*************************************************
+// MARK: - Protected Methods
+//*************************************************
+
+//*************************************************
+// MARK: - Exposed Methods
+//*************************************************
+	
+	func addStubs() {
+		//Notice Stub
+		stub(condition: isHost("nu-mobile-hiring.herokuapp.com") && isPath("/notice")) { request in
+			// Stub it with our "notice.json" stub file
+			return OHHTTPStubsResponse(
+				fileAtPath: OHPathForFile("notice.json", type(of: self))!,
+				statusCode: 200,
+				headers: ["Content-Type":"application/json"]
+			)
+		}
+		//Chargeback Stub
+		stub(condition: isHost("nu-mobile-hiring.herokuapp.com") && isPath("/chargeback")) { request in
+			// Stub it with our "chargeback.json" stub file
+			return OHHTTPStubsResponse(
+				fileAtPath: OHPathForFile("chargeback.json", type(of: self))!,
+				statusCode: 200,
+				headers: ["Content-Type":"application/json"]
+			)
+		}
+	}
+	
+	func removeStubs() {
+		OHHTTPStubs.removeAllStubs()
+	}
+
+//*************************************************
+// MARK: - Overridden Public Methods
+//*************************************************
+	
 }
