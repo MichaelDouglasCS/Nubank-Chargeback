@@ -63,6 +63,10 @@ class FinishChargebackVC: UIViewController {
 // MARK: - Exposed Methods
 //*************************************************
 
+	@IBAction func actionClose(_ sender: UIButton) {
+		self.showInfoAlert(title: "Opa!", message: "Muito Obrigado por testar meu app :)")
+	}
+	
 //*************************************************
 // MARK: - Overridden Public Methods
 //*************************************************

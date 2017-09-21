@@ -129,7 +129,7 @@ class NoticeVC: UIViewController {
 	}
 
 	@IBAction func closeAction(_ sender: UIButton) {
-		
+		self.showInfoAlert(title: "Opa!", message: "Não vá embora, teste meu App antes :)")
 	}
 	
 //*************************************************
