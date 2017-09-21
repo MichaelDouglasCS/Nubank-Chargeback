@@ -35,6 +35,7 @@ struct Test {
 	
 	static let timeout: TimeInterval = 30.0
 	static var isLoadedNotice: Bool = false
+	static var isLoadedChargeback: Bool = false
 	
 //**************************************************
 // MARK: - Exposed Methods
@@ -46,6 +47,17 @@ struct Test {
 		} else {
 			NoticeLO.sharedInstance.load { (response: ServerResponse) in
 				self.isLoadedNotice = true
+				completion()
+			}
+		}
+	}
+	
+	static func loadChargebackFromServer(completion: @escaping (() -> Void)) {
+		if self.isLoadedChargeback {
+			completion()
+		} else {
+			ChargebackLO.sharedInstance.load { (response: ServerResponse) in
+				self.isLoadedChargeback = true
 				completion()
 			}
 		}

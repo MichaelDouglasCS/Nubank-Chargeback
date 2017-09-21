@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		611ED57A1F6F330B00B1FD4C /* ChargebackVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611ED5791F6F330B00B1FD4C /* ChargebackVC.swift */; };
 		611ED57C1F6F344200B1FD4C /* UISwitchButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611ED57B1F6F344200B1FD4C /* UISwitchButton.swift */; };
+		61837BD21F73273200E0F37B /* ChargebackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61837BD11F73273200E0F37B /* ChargebackTests.swift */; };
 		618F9E841F7037C700AEEDBE /* KeyboardKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618F9E831F7037C700AEEDBE /* KeyboardKit.swift */; };
 		61BF9F9F1F720DD1002CCE80 /* ServerRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61BF9F9E1F720DD1002CCE80 /* ServerRequestTests.swift */; };
 		61BF9FA21F7214D2002CCE80 /* TestingCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61BF9FA11F7214D2002CCE80 /* TestingCommon.swift */; };
@@ -62,6 +63,7 @@
 		57374EA834C264223E0F88BC /* Pods_Nubank_ChargebackUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nubank_ChargebackUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		611ED5791F6F330B00B1FD4C /* ChargebackVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChargebackVC.swift; sourceTree = "<group>"; };
 		611ED57B1F6F344200B1FD4C /* UISwitchButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UISwitchButton.swift; sourceTree = "<group>"; };
+		61837BD11F73273200E0F37B /* ChargebackTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChargebackTests.swift; sourceTree = "<group>"; };
 		618F9E831F7037C700AEEDBE /* KeyboardKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardKit.swift; sourceTree = "<group>"; };
 		61BF9F9E1F720DD1002CCE80 /* ServerRequestTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerRequestTests.swift; sourceTree = "<group>"; };
 		61BF9FA01F720FED002CCE80 /* Nubank-ChargebackTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Nubank-ChargebackTests-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 		61F78A4B1F6B77FB00F94CB0 /* Nubank-ChargebackTests */ = {
 			isa = PBXGroup;
 			children = (
+				61837BD11F73273200E0F37B /* ChargebackTests.swift */,
 				61F78A4E1F6B77FB00F94CB0 /* Info.plist */,
 				61BF9FA31F72153F002CCE80 /* NoticeTests.swift */,
 				61BF9FA01F720FED002CCE80 /* Nubank-ChargebackTests-Bridging-Header.h */,
@@ -707,6 +710,7 @@
 			files = (
 				61BF9F9F1F720DD1002CCE80 /* ServerRequestTests.swift in Sources */,
 				61BF9FA41F72153F002CCE80 /* NoticeTests.swift in Sources */,
+				61837BD21F73273200E0F37B /* ChargebackTests.swift in Sources */,
 				61BF9FA21F7214D2002CCE80 /* TestingCommon.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
